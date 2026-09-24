@@ -89,7 +89,7 @@ const markdown = new MarkdownIt({
 })
   .use(anchor, { slugify: (text) => text.trim().toLowerCase().replace(/[^\w]+/g, '-').replace(/(^-|-$)/g, '') });
 
-function renderMarkdown(source) {
+function renderMarkdown(source, baseUrl = '') {
   const chartSource = source.replace(/```chart\s*\n([\s\S]*?)```/g, (_, configSource) => {
     let config;
     try {
@@ -119,8 +119,23 @@ function renderMarkdown(source) {
     .split(/(```[\s\S]*?```)/g)
     .map((segment) => segment.startsWith('```') ? segment : renderSegment(segment))
     .join('');
-  const rendered = markdown.render(protectedSource)
+  let rendered = markdown.render(protectedSource)
     .replace(/@@NLCO_MATH_(\d+)@@/g, (_, index) => expressions[Number(index)]);
+
+  // Fix absolute paths for assets when baseUrl is set
+  if (baseUrl) {
+    rendered = rendered
+      .replace(/src="(\/(?:assets|images|trace_example|papers)\/[^"]+)"/g, (match, path) => {
+        return 'src="' + baseUrl + path + '"';
+      })
+      .replace(/href="(\/(?:assets|images|trace_example|papers)\/[^"]+)"/g, (match, path) => {
+        return 'href="' + baseUrl + path + '"';
+      })
+      .replace(/data-trace-file="(\/[^"]+)"/g, (match, path) => {
+        return 'data-trace-file="' + baseUrl + path + '"';
+      });
+  }
+
   // Color benchmark gains and declines in tables while leaving the score itself intact.
   return rendered.replace(/<table[\s\S]*?<\/table>/g, (table) => table
     .replace(/\(\+(\d+(?:\.\d+)?)\)/g, '<span class="benchmark-gain">(+$1)</span>')
@@ -419,17 +434,17 @@ function backmatterDataValue(data, keys) {
   return '';
 }
 
-function backmatterSectionMarkup(id, title, value, bibliography, cited) {
+function backmatterSectionMarkup(id, title, value, bibliography, cited, baseUrl = '') {
   const source = markdownSourceFromConfig(value);
   if (!source) return '';
   const citedContent = citationSource(source, bibliography);
   for (const key of citedContent.cited) cited.add(key);
   return '<section class="backmatter-section" aria-labelledby="' + id + '"><h3 id="' + id + '">'
     + escapeHtml(title) + '</h3><div class="backmatter-content">'
-    + renderMarkdown(citedContent.source).trim() + '</div></section>';
+    + renderMarkdown(citedContent.source, baseUrl).trim() + '</div></section>';
 }
 
-function backmatterMarkup(post) {
+function backmatterMarkup(post, baseUrl = '') {
   const data = post.data;
   const sections = [
     backmatterSectionMarkup(
@@ -437,21 +452,24 @@ function backmatterMarkup(post) {
       'Acknowledgments',
       backmatterDataValue(data, ['acknowledgments', 'acknowledgements']),
       post.bibliography,
-      post.cited
+      post.cited,
+      baseUrl
     ),
     backmatterSectionMarkup(
       'author-contributions',
       'Author Contributions',
       backmatterDataValue(data, ['author_contributions', 'author-contributions']),
       post.bibliography,
-      post.cited
+      post.cited,
+      baseUrl
     ),
     backmatterSectionMarkup(
       'discussion-and-review',
       'Discussion and Review',
       backmatterDataValue(data, ['discussion_and_review', 'discussion-and-review']),
       post.bibliography,
-      post.cited
+      post.cited,
+      baseUrl
     ),
     footnotesMarkup(post.footnotes)
   ].filter(Boolean);
@@ -594,7 +612,7 @@ function articlePage(post, config, baseUrl) {
   const tagMarkup = tags.length
     ? '<p class="tags">' + tags.map((tag) => '<span>' + escapeHtml(tag) + '</span>').join('') + '</p>'
     : '';
-  const articleContent = post.html + backmatterMarkup(post);
+  const articleContent = post.html + backmatterMarkup(post, baseUrl);
   const outline = outlineFromHtml(post.html);
   const body = '<article><header class="article-header">'
     + '<p class="eyebrow">' + formatDate(data.date) + '</p>'
@@ -619,7 +637,7 @@ async function main() {
     const footnotes = extracted.footnotes.map((footnote) => {
       const citedFootnote = citationSource(footnote.source, bibliography);
       for (const key of citedFootnote.cited) citedContent.cited.add(key);
-      return { ...footnote, html: renderMarkdown(citedFootnote.source).trim() };
+      return { ...footnote, html: renderMarkdown(citedFootnote.source, baseUrl).trim() };
     });
     const relative = path.relative(contentDirectory, file).replace(/\.md$/i, '');
     const segments = relative.split(path.sep).map((part) => {
@@ -633,7 +651,7 @@ async function main() {
       bibliography,
       cited: citedContent.cited,
       footnotes,
-      html: renderMarkdown(citedContent.source),
+      html: renderMarkdown(citedContent.source, baseUrl),
       slug
     };
   }));

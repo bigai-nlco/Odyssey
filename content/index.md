@@ -1221,7 +1221,9 @@ To complement the quantitative benchmarks, we provide interactive trace visualiz
     content.innerHTML = '<div class="loading-message"><span class="loading-spinner"></span>Loading trace data...</div>';
     
     try {
-      const response = await fetch(`/trace_example/${trace.file}`);
+      // Get base URL from the current page path
+      const basePath = window.location.pathname.replace(/\/[^\/]*$/, '');
+      const response = await fetch(`${basePath}/trace_example/${trace.file}`);
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
