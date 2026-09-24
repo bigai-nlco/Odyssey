@@ -26,7 +26,7 @@ bibliography: references.bib
 
 <figure class="l-page">
   <img src="/assets/alphago_lee_sedol.webp" alt="Lee Sedol contemplating during AlphaGo match" />
-  <figcaption><strong>Figure:</strong> Lee Sedol during the historic AlphaGo vs. Lee Sedol match (2016). AlphaGo's Move 37 in Game 2 became legendary for its unconventional brilliance—a decision that initially appeared to be a mistake but proved pivotal to victory.</figcaption>
+  <figcaption><strong>Figure 1:</strong> Lee Sedol during the historic AlphaGo vs. Lee Sedol match (2016). AlphaGo's Move 37 in Game 2 became legendary for its unconventional brilliance, a decision that initially appeared to be a mistake but proved pivotal to victory.</figcaption>
 </figure>
 
 <div class="evidence-note" style="font-style: italic; margin: 1rem 0 1.5rem;">
@@ -100,7 +100,7 @@ Odyssey-Env mines real-world structured data and builds 13,000 environments with
 
 <figure class="l-page">
   <img src="/assets/odyssey-env-pipeline.svg" alt="Odyssey-Env Five-Stage Pipeline Visualization" />
-  <figcaption><strong>Figure 1</strong>: Five-stage autonomous environment synthesis. Each stage builds on verified outputs from the previous stage.</figcaption>
+  <figcaption><strong>Figure 2:</strong> Five-stage autonomous environment synthesis. Each stage builds on verified outputs from the previous stage.</figcaption>
 </figure>
 
 Each environment contains: $q$ (user query), $f_{\text{submit}}$ (submission schema), $\text{solver}$ (ground-truth solution), $\text{verifier}$ (verification program).
@@ -299,7 +299,7 @@ Odyssey extends [Slime](https://github.com/THUDM/slime) to serve as the RL train
 
 <figure class="l-page">
   <img src="/assets/odyssey_infra.svg" alt="Odyssey-Infra Architecture" />
-  <figcaption><strong>Figure 2</strong>: Odyssey-Infra architecture for reliable agentic RL training at scale. The system coordinates rollout workers (SGLang inference servers) and training workers (Megatron-LM) through a central coordinator, enforcing three key guarantees: <strong>(1) Strict Token-In-Token-Out (TITO)</strong> passes tokens directly from generation to training without re-encoding, eliminating tokenization inconsistencies; <strong>(2) Bitwise Parity</strong> achieves zero training-inference mismatch through deterministic execution, batch-invariant kernels, and matched tensor layouts; <strong>(3) Elastic Scheduling</strong> manages distributed GPU resources with cache-aware worker reuse and coordinated rollout cancellation to prevent stale gradients. This infrastructure enables stable, large-scale training while maintaining correctness guarantees absent in standard RL setups.</figcaption>
+  <figcaption><strong>Figure 3:</strong> Odyssey-Infra architecture for reliable agentic RL training at scale. The system coordinates rollout workers (SGLang inference servers) and training workers (Megatron-LM) through a central coordinator, enforcing three key guarantees: <strong>(1) Strict Token-In-Token-Out (TITO)</strong> passes tokens directly from generation to training without re-encoding, eliminating tokenization inconsistencies; <strong>(2) Bitwise Parity</strong> achieves zero training-inference mismatch through deterministic execution, batch-invariant kernels, and matched tensor layouts; <strong>(3) Elastic Scheduling</strong> manages distributed GPU resources with cache-aware worker reuse and coordinated rollout cancellation to prevent stale gradients. This infrastructure enables stable, large-scale training while maintaining correctness guarantees absent in standard RL setups.</figcaption>
 </figure>
 
 ### 1. Strict Token-In-Token-Out (TITO)
@@ -312,7 +312,7 @@ Odyssey extends [Slime](https://github.com/THUDM/slime) to serve as the RL train
 
 <figure class="l-page">
   <img src="/assets/bitwise_parity_trace.svg" alt="Bitwise Parity Verification Process" />
-  <figcaption><strong>Figure 3:</strong> Walking backward from the selected-token log probability to the first numerical difference. Trainer scoring, inference prefill and inference decode begin with the same inputs and weights. Their selected-token log probability bytes are compared, the forwards are traced backward to the first differing operation, and that operation is reduced to one row, reduction or state update. Its inputs, constants, rounding points, complete addition order and state handoffs are aligned. Scheduling, layout and transport may change only after the production-shape byte comparison passes again. See details from the source of this illustration: kiddyboots216.github.io/mismatch.</figcaption>
+  <figcaption><strong>Figure 4:</strong> Walking backward from the selected-token log probability to the first numerical difference. Trainer scoring, inference prefill and inference decode begin with the same inputs and weights. Their selected-token log probability bytes are compared, the forwards are traced backward to the first differing operation, and that operation is reduced to one row, reduction or state update. Its inputs, constants, rounding points, complete addition order and state handoffs are aligned. Scheduling, layout and transport may change only after the production-shape byte comparison passes again. See details from the source of this illustration: kiddyboots216.github.io/mismatch.</figcaption>
 </figure>
 
 **Faster-TOP (Faster True On-Policy)** implements zero training-inference mismatch with optimized kernels:
@@ -377,7 +377,7 @@ Models trained on Odyssey-13K generalize to external benchmarks without fine-tun
 
 <figure class="l-page">
   <img src="/images/wikiqa_react_vs_odyssey.svg" alt="WikiQA average Pass@1: ReAct versus Odyssey at 4B, 60.8 versus 69.4; 8B, 66.0 versus 71.9; 14B, 66.0 versus 73.0." loading="lazy">
-  <figcaption><strong>Figure 4:</strong> Average WikiQA Pass@1 for ReAct and Odyssey at matching model sizes. Values are taken from the existing WikiQA comparison figure; no run-level uncertainty is available for these comparisons.</figcaption>
+  <figcaption><strong>Figure 5:</strong> Average WikiQA Pass@1 for ReAct and Odyssey at matching model sizes. Values are taken from the existing WikiQA comparison figure; no run-level uncertainty is available for these comparisons.</figcaption>
 </figure>
 
 Odyssey improves over ReAct at all three sizes: 60.8→69.4 at 4B (+8.6), 66.0→71.9 at 8B (+5.9), 66.0→73.0 at 14B (+7.0). Odyssey-Nano (4B) exceeds ReAct 8B and 14B by 3.4 points. Individual benchmarks don't improve uniformly; 14B scores slightly lower than 8B on Natural Questions and 2WikiMultiHopQA. These averages show an advantage over reported baselines but don't isolate which training components produced gains or establish statistical significance.
@@ -388,7 +388,7 @@ On challenging deep search benchmarks that require extended search, analysis, an
 
 <figure class="l-page">
   <img src="/assets/odyssey_websearch_dynamics.svg" alt="Web Search Dynamics Analysis" />
-  <figcaption><strong>Figure 5</strong>: Long-horizon search behavior on BrowseComp-Plus. We compare Odyssey-Mid against ReAct (Qwen3-14B), filtering out questions that ReAct already solved correctly. For the remaining challenging questions, we group them by the increase in web search calls that Odyssey makes relative to ReAct, then measure the number of questions solved in each bucket. The curve shows an initial rise followed by a decline, indicating that the model learns to adopt long-horizon search strategies after training. The ascending portion demonstrates that extended search helps solve difficult problems within a certain range, while the subsequent decline reflects questions that remain challenging even with more search attempts. This decline does not invalidate the long-horizon approach; rather, it suggests that for the hardest questions, the model attempts more searches as a natural exploration strategy, even when the underlying problem complexity exceeds the model's current reasoning capacity.</figcaption>
+  <figcaption><strong>Figure 6:</strong> Long-horizon search behavior on BrowseComp-Plus. We compare Odyssey-Mid against ReAct (Qwen3-14B), filtering out questions that ReAct already solved correctly. For the remaining challenging questions, we group them by the increase in web search calls that Odyssey makes relative to ReAct, then measure the number of questions solved in each bucket. The curve shows an initial rise followed by a decline, indicating that the model learns to adopt long-horizon search strategies after training. The ascending portion demonstrates that extended search helps solve difficult problems within a certain range, while the subsequent decline reflects questions that remain challenging even with more search attempts. This decline does not invalidate the long-horizon approach; rather, it suggests that for the hardest questions, the model attempts more searches as a natural exploration strategy, even when the underlying problem complexity exceeds the model's current reasoning capacity.</figcaption>
 </figure>
 
 | **Benchmark** | **Domain** | **Odyssey-8B** | **Odyssey-14B** | **Odyssey-14B + Summarization** |
@@ -403,7 +403,7 @@ Compared to the associated base models as start points, Odyssey-14B matches or e
 
 <figure class="l-page">
   <img src="/images/tool_usage_react_vs_odyssey.svg" alt="Tool usage Pass@1, ReAct versus Odyssey at 4B, 8B, and 14B: BFCL-v4 35.2 to 39.7, 36.3 to 47.7, 39.1 to 49.5; ACEBench 51.6 to 65.0, 59.1 to 68.3, 69.0 to 78.3." loading="lazy">
-  <figcaption><strong>Figure 6:</strong> ReAct base agents (light bars) and Odyssey agents (dark bars) on BFCL-v4 and ACEBench. Odyssey has higher mean Pass@1 in all six comparisons. Gains range from 4.5 to 11.4 points on BFCL-v4 and 9.2 to 13.4 points on ACEBench.</figcaption>
+  <figcaption><strong>Figure 7:</strong> ReAct base agents (light bars) and Odyssey agents (dark bars) on BFCL-v4 and ACEBench. Odyssey has higher mean Pass@1 in all six comparisons. Gains range from 4.5 to 11.4 points on BFCL-v4 and 9.2 to 13.4 points on ACEBench.</figcaption>
 </figure>
 
 BFCL-v4 scores: 35.2→39.7 (4B), 36.3→47.7 (8B), 39.1→49.5 (14B). ACEBench: 51.6→65.0, 59.1→68.3, 69.0→78.3. Odyssey-Mini (8B) shows the largest BFCL-v4 gain (+11.4); Odyssey-Nano (4B) the largest ACEBench gain (+13.4). Odyssey-Nano (4B) slightly exceeds ReAct-14B on BFCL-v4 (39.7 vs. 39.1) but remains below on ACEBench (65.0 vs. 69.0).
@@ -412,7 +412,7 @@ BFCL-v4 scores: 35.2→39.7 (4B), 36.3→47.7 (8B), 39.1→49.5 (14B). ACEBench:
 
 <figure class="l-page">
   <img src="/images/conversation_react_vs_odyssey.svg" alt="Conversation scores, ReAct versus Odyssey: τ²-Bench 25.9 to 33.4, 37.7 to 45.6, 40.1 to 37.9; VitaBench 2.0 to 3.1, 1.0 to 8.0, 9.0 to 6.0 at 4B, 8B, and 14B." loading="lazy">
-  <figcaption><strong>Figure 7:</strong> Conversation Pass@1 across model sizes. Odyssey improves both benchmarks at 4B and 8B, but scores below its corresponding base at 14B.</figcaption>
+  <figcaption><strong>Figure 8:</strong> Conversation Pass@1 across model sizes. Odyssey improves both benchmarks at 4B and 8B, but scores below its corresponding base at 14B.</figcaption>
 </figure>
 
 **Key Observations**:
@@ -424,7 +424,7 @@ BFCL-v4 scores: 35.2→39.7 (4B), 36.3→47.7 (8B), 39.1→49.5 (14B). ACEBench:
 
 <figure class="l-page">
   <img src="/images/knowledge_work_react_vs_odyssey.svg" alt="Knowledge work scores, ReAct versus Odyssey: WorkBench 45.6 to 46.5, 57.0 to 58.0, 59.2 to 61.0; OfficeQA 17.5 to 18.3, 20.6 to 20.6, 24.4 to 26.7 at 4B, 8B, and 14B." loading="lazy">
-  <figcaption><strong>Figure 8:</strong> Knowledge Work Pass@1. Five of six comparisons improve; OfficeQA at 8B is unchanged.</figcaption>
+  <figcaption><strong>Figure 9:</strong> Knowledge Work Pass@1. Five of six comparisons improve; OfficeQA at 8B is unchanged.</figcaption>
 </figure>
 
 WorkBench gains: 0.9 (4B), 1.0 (8B), 1.8 (14B). OfficeQA: +0.8 (4B), 0.0 (8B), +2.3 (14B). Gains are smaller than on tool-use benchmarks.
@@ -481,7 +481,7 @@ A critical aspect of reliable RL training is maintaining consistency between the
 
 <figure class="l-page">
   <img src="/assets/training_logprob_consistency.svg" alt="Training Rollout Logprob Consistency" />
-  <figcaption><strong>Figure 9:</strong> Training-rollout log probability absolute difference over 199 training steps (Odyssey-14B). The orange curve (w/o Faster-TOP) shows natural convergence from 0.0117 to 0.0091 due to training dynamics. The green dashed line represents perfect consistency (0.0) achieved with Odyssey-Infra's Faster-TOP optimization, which enforces bitwise parity through TITO and deterministic execution mechanisms. Lower values indicate better consistency between training and inference computations.</figcaption>
+  <figcaption><strong>Figure 10:</strong> Training-rollout log probability absolute difference over 199 training steps (Odyssey-14B). The orange curve (w/o Faster-TOP) shows natural convergence from 0.0117 to 0.0091 due to training dynamics. The green dashed line represents perfect consistency (0.0) achieved with Odyssey-Infra's Faster-TOP optimization, which enforces bitwise parity through TITO and deterministic execution mechanisms. Lower values indicate better consistency between training and inference computations.</figcaption>
 </figure>
 
 **Key observations**:
