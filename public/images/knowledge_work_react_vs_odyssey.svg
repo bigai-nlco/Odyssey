@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc" font-family="anthropic-sans, -apple-system, system-ui, Segoe UI, sans-serif">
+<title id="title">Knowledge Work: OfficeQA &amp; WorkBench</title>
+<desc id="desc">Reported Pass@1 for ReAct and Odyssey at 4B, 8B and 14B. Error bars are randomly sized layout placeholders, not measured uncertainty.</desc>
+<text x="30.0" y="34.0" font-size="20" font-weight="500" fill="#0b0b0b" text-anchor="start">Knowledge Work: OfficeQA &amp; WorkBench</text>
+<text x="30.0" y="58.0" font-size="14" font-weight="400" fill="#52514e" text-anchor="start">Reported Pass@1 (%), Base (ReAct) vs. Mixed RL (Odyssey).</text>
+<defs><mask id="label-gaps"><rect width="900" height="520" fill="white"/><rect x="79.10" y="319.39" width="42" height="22" fill="black" rx="2"/><rect x="123.10" y="317.76" width="42" height="22" fill="black" rx="2"/><rect x="213.20" y="194.08" width="42" height="22" fill="black" rx="2"/><rect x="257.20" y="191.43" width="42" height="22" fill="black" rx="2"/><rect x="347.40" y="305.43" width="42" height="22" fill="black" rx="2"/><rect x="391.40" y="307.41" width="42" height="22" fill="black" rx="2"/><rect x="481.50" y="142.75" width="42" height="22" fill="black" rx="2"/><rect x="525.50" y="136.96" width="42" height="22" fill="black" rx="2"/><rect x="615.70" y="290.90" width="42" height="22" fill="black" rx="2"/><rect x="659.70" y="278.41" width="42" height="22" fill="black" rx="2"/><rect x="749.80" y="132.96" width="42" height="22" fill="black" rx="2"/><rect x="793.80" y="125.23" width="42" height="22" fill="black" rx="2"/></mask></defs>
+<g stroke="#e1e0d9" stroke-width="1" mask="url(#label-gaps)">
+<line x1="55" y1="362.00" x2="860" y2="362.00"/>
+<line x1="55" y1="294.00" x2="860" y2="294.00"/>
+<line x1="55" y1="226.00" x2="860" y2="226.00"/>
+<line x1="55" y1="158.00" x2="860" y2="158.00"/>
+<line x1="55" y1="90.00" x2="860" y2="90.00"/>
+</g><line x1="55" y1="430" x2="860" y2="430" stroke="#c3c2b7" stroke-width="1"/>
+<text x="42.0" y="435.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">0</text>
+<text x="42.0" y="367.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">15</text>
+<text x="42.0" y="299.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">30</text>
+<text x="42.0" y="231.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">45</text>
+<text x="42.0" y="163.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">60</text>
+<text x="42.0" y="95.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">75</text>
+<path d="M82.10,430 L82.10,356.67 Q82.10,350.67 88.10,350.67 L112.10,350.67 Q118.10,350.67 118.10,356.67 L118.10,430 Z" fill="#bad2f3"/>
+<line class="placeholder-error-bar" x1="100.10" y1="343.39" x2="100.10" y2="357.94" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M126.10,430 L126.10,353.04 Q126.10,347.04 132.10,347.04 L156.10,347.04 Q162.10,347.04 162.10,353.04 L162.10,430 Z" fill="#2c79d6"/>
+<line class="placeholder-error-bar" x1="144.10" y1="341.76" x2="144.10" y2="352.32" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M216.20,430 L216.20,229.28 Q216.20,223.28 222.20,223.28 L246.20,223.28 Q252.20,223.28 252.20,229.28 L252.20,430 Z" fill="#bad2f3"/>
+<line class="placeholder-error-bar" x1="234.20" y1="218.08" x2="234.20" y2="228.48" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M260.20,430 L260.20,225.20 Q260.20,219.20 266.20,219.20 L290.20,219.20 Q296.20,219.20 296.20,225.20 L296.20,430 Z" fill="#2c79d6"/>
+<line class="placeholder-error-bar" x1="278.20" y1="215.43" x2="278.20" y2="222.97" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M350.40,430 L350.40,342.61 Q350.40,336.61 356.40,336.61 L380.40,336.61 Q386.40,336.61 386.40,342.61 L386.40,430 Z" fill="#f9ccbc"/>
+<line class="placeholder-error-bar" x1="368.40" y1="329.43" x2="368.40" y2="343.79" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M394.40,430 L394.40,342.61 Q394.40,336.61 400.40,336.61 L424.40,336.61 Q430.40,336.61 430.40,342.61 L430.40,430 Z" fill="#eb6935"/>
+<line class="placeholder-error-bar" x1="412.40" y1="331.41" x2="412.40" y2="341.82" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M484.50,430 L484.50,177.60 Q484.50,171.60 490.50,171.60 L514.50,171.60 Q520.50,171.60 520.50,177.60 L520.50,430 Z" fill="#f9ccbc"/>
+<line class="placeholder-error-bar" x1="502.50" y1="166.75" x2="502.50" y2="176.45" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M528.50,430 L528.50,173.07 Q528.50,167.07 534.50,167.07 L558.50,167.07 Q564.50,167.07 564.50,173.07 L564.50,430 Z" fill="#eb6935"/>
+<line class="placeholder-error-bar" x1="546.50" y1="160.96" x2="546.50" y2="173.17" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M618.70,430 L618.70,325.39 Q618.70,319.39 624.70,319.39 L648.70,319.39 Q654.70,319.39 654.70,325.39 L654.70,430 Z" fill="#bfe3b5"/>
+<line class="placeholder-error-bar" x1="636.70" y1="314.90" x2="636.70" y2="323.87" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M662.70,430 L662.70,314.96 Q662.70,308.96 668.70,308.96 L692.70,308.96 Q698.70,308.96 698.70,314.96 L698.70,430 Z" fill="#3b8f2c"/>
+<line class="placeholder-error-bar" x1="680.70" y1="302.41" x2="680.70" y2="315.51" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M752.80,430 L752.80,167.63 Q752.80,161.63 758.80,161.63 L782.80,161.63 Q788.80,161.63 788.80,167.63 L788.80,430 Z" fill="#bfe3b5"/>
+<line class="placeholder-error-bar" x1="770.80" y1="156.96" x2="770.80" y2="166.29" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M796.80,430 L796.80,159.47 Q796.80,153.47 802.80,153.47 L826.80,153.47 Q832.80,153.47 832.80,159.47 L832.80,430 Z" fill="#3b8f2c"/>
+<line class="placeholder-error-bar" x1="814.80" y1="149.23" x2="814.80" y2="157.70" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<text x="100.1" y="335.4" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">17.5</text>
+<text x="144.1" y="333.8" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">18.3</text>
+<text x="122.1" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">OfficeQA</text>
+<text x="234.2" y="210.1" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">45.6</text>
+<text x="278.2" y="207.4" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">46.5</text>
+<text x="256.2" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">WorkBench</text>
+<text x="189.2" y="486" text-anchor="middle" font-size="15" font-weight="500" fill="#2c79d6" style="fill:rgb(44, 121, 214);stroke:none;font-family:anthropic-sans, -apple-system, system-ui, Segoe UI, sans-serif;font-size:15px;font-weight:500;text-anchor:middle">ReAct (Q3-4B) / Odyssey-Nano</text>
+<text x="368.4" y="321.4" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">20.6</text>
+<text x="412.4" y="323.4" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">20.6</text>
+<text x="390.4" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">OfficeQA</text>
+<text x="502.5" y="158.8" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">57.0</text>
+<text x="546.5" y="153.0" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">58.0</text>
+<text x="524.5" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">WorkBench</text>
+<text x="457.5" y="486" text-anchor="middle" font-size="15" font-weight="500" fill="#eb6935" style="fill:rgb(235, 105, 53);stroke:none;font-family:anthropic-sans, -apple-system, system-ui, Segoe UI, sans-serif;font-size:15px;font-weight:500;text-anchor:middle">ReAct (Q3-8B) / Odyssey-Mini</text>
+<text x="636.7" y="306.9" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">24.4</text>
+<text x="680.7" y="294.4" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">26.7</text>
+<text x="658.7" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">OfficeQA</text>
+<text x="770.8" y="149.0" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">59.2</text>
+<text x="814.8" y="141.2" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">61.0</text>
+<text x="792.8" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">WorkBench</text>
+<text x="725.8" y="486" text-anchor="middle" font-size="15" font-weight="500" fill="#3b8f2c" style="fill:rgb(59, 143, 44);stroke:none;font-family:anthropic-sans, -apple-system, system-ui, Segoe UI, sans-serif;font-size:15px;font-weight:500;text-anchor:middle">ReAct (Q3-14B) / Odyssey-Mid</text>
+<rect x="620" y="18" width="16" height="16" rx="3" fill="#c3c2b7"/>
+<text x="642.0" y="31" font-size="14" font-weight="400" fill="#52514e" text-anchor="start">Base (ReAct)</text>
+<rect x="620" y="40" width="16" height="16" rx="3" fill="#5f5e5a"/>
+<text x="642.0" y="53" font-size="14" font-weight="400" fill="#52514e" text-anchor="start">Mixed RL (Odyssey)</text>
+</svg>

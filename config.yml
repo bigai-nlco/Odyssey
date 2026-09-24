@@ -1,0 +1,9 @@
+# For https://username.github.io/repository/, set base_url: /repository.
+# Leave it empty for a user/organization site (username.github.io).
+site_name: NLCo
+site_description: AgentGEM research from the Natural Language Computing group.
+base_url: ""
+language: en
+copyright: 2026 BIGAI NLCo Group. All rights reserved.
+header:
+  site_logo: /images/TA_logo.svg

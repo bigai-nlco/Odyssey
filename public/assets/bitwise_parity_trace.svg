@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 530" role="img" aria-labelledby="bitwise-parity-title bitwise-parity-desc">
+  <title id="bitwise-parity-title">Bitwise Parity Verification Process</title>
+  <desc id="bitwise-parity-desc">Walking backward from the selected-token log probability to the first numerical difference. Trainer scoring, inference prefill and inference decode begin with the same inputs and weights.</desc>
+
+  <!-- Title -->
+  <text x="480" y="29" font-size="16" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" letter-spacing="0.5">START AT THE OUTPUT · TRACE BACKWARD TO THE FIRST DIFFERENCE</text>
+  <line x1="32" y1="50" x2="928" y2="50" stroke="#e1e0d9" stroke-width="1"></line>
+
+  <!-- Main Container -->
+  <rect x="32" y="62" width="896" height="128" rx="18" fill="#f8fbff" stroke="#b9d2f3" stroke-width="1.5"></rect>
+  <rect x="46" y="88" width="112" height="76" rx="12" fill="#fffdf7" stroke="#2d79d6" stroke-width="1.5"></rect>
+  <text x="102" fill="#2d79d6" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.2" text-anchor="middle"><tspan x="102" y="124">SAME INPUTS +</tspan><tspan x="102" y="136">WEIGHTS</tspan></text>
+
+  <text x="430" y="80" fill="rgb(82, 81, 78)" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" letter-spacing="0.4">FORWARD OPERATIONS</text>
+  <text x="690" y="80" fill="rgb(82, 81, 78)" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" letter-spacing="0.3">FP32 SELECTED-TOKEN LOGPROB BYTES</text>
+
+  <!-- XORL SCORE Path (Blue) -->
+  <path d="M 158 126 C 190 126 188 96 214 96" fill="none" stroke="#2d79d6" stroke-width="2"></path>
+  <polygon points="214,96 209,92.9 209,99.1" fill="#2d79d6"></polygon>
+  <text x="222" y="99" fill="#2d79d6" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="start">XORL SCORE</text>
+
+  <!-- Operations -->
+  <path d="M 304 96 H 317" fill="none" stroke="#2d79d6" stroke-width="1.5"></path>
+  <polygon points="317,96 313,93.52 313,98.48" fill="#2d79d6"></polygon>
+  <rect x="317" y="85" width="36" height="22" rx="6" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.2"></rect>
+  <text x="335" y="96.5" fill="#2d79d6" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op1</text>
+
+  <path d="M 354 96 H 386" fill="none" stroke="#2d79d6" stroke-width="1.5"></path>
+  <polygon points="386,96 382,93.52 382,98.48" fill="#2d79d6"></polygon>
+  <rect x="387" y="85" width="36" height="22" rx="6" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.2"></rect>
+  <text x="405" y="96.5" fill="#2d79d6" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op2</text>
+
+  <path d="M 424 96 H 456" fill="none" stroke="#2d79d6" stroke-width="1.5"></path>
+  <polygon points="456,96 452,93.52 452,98.48" fill="#2d79d6"></polygon>
+  <rect x="457" y="85" width="36" height="22" rx="6" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.2"></rect>
+  <text x="475" y="96.5" fill="#2d79d6" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op3</text>
+
+  <path d="M 494 96 H 526" fill="none" stroke="#2d79d6" stroke-width="1.5"></path>
+  <polygon points="526,96 522,93.52 522,98.48" fill="#2d79d6"></polygon>
+  <rect x="527" y="85" width="36" height="22" rx="6" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.2"></rect>
+  <text x="545" y="96.5" fill="#2d79d6" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op4</text>
+
+  <path d="M 564 96 H 598" fill="none" stroke="#2d79d6" stroke-width="2"></path>
+  <polygon points="598,96 593,92.9 593,99.1" fill="#2d79d6"></polygon>
+  <text x="613" y="99" fill="#2d79d6" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">qₜ</text>
+
+  <!-- Output bytes (Blue) -->
+  <rect x="628" y="90" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="640" y="90" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="652" y="90" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="664" y="90" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="676" y="90" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="688" y="90" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="700" y="90" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="712" y="90" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+
+  <!-- SGLANG PREFILL Path (Orange) -->
+  <path d="M 158 126 C 190 126 188 126 214 126" fill="none" stroke="#eb6936" stroke-width="2"></path>
+  <polygon points="214,126 209,122.9 209,129.1" fill="#eb6936"></polygon>
+  <text x="222" y="129" fill="#eb6936" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="start">SGLANG PREFILL</text>
+
+  <path d="M 304 126 H 317" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="317,126 313,123.52 313,128.48" fill="#eb6936"></polygon>
+  <rect x="317" y="115" width="36" height="22" rx="6" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="335" y="126.5" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op1</text>
+
+  <path d="M 354 126 H 386" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="386,126 382,123.52 382,128.48" fill="#eb6936"></polygon>
+  <rect x="387" y="115" width="36" height="22" rx="6" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="405" y="126.5" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op2</text>
+
+  <path d="M 424 126 H 456" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="456,126 452,123.52 452,128.48" fill="#eb6936"></polygon>
+  <rect x="457" y="115" width="36" height="22" rx="6" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="475" y="126.5" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op3</text>
+
+  <path d="M 494 126 H 526" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="526,126 522,123.52 522,128.48" fill="#eb6936"></polygon>
+  <rect x="527" y="115" width="36" height="22" rx="6" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="545" y="126.5" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op4</text>
+
+  <path d="M 564 126 H 598" fill="none" stroke="#eb6936" stroke-width="2"></path>
+  <polygon points="598,126 593,122.9 593,129.1" fill="#eb6936"></polygon>
+  <text x="613" y="129" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">sᵖₜ</text>
+
+  <!-- Prefill bytes (Orange) -->
+  <rect x="628" y="120" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="640" y="120" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="652" y="120" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="664" y="120" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="676" y="120" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="688" y="120" width="9" height="12" rx="2" fill="#eb6936" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="700" y="120" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="712" y="120" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+
+  <!-- SGLANG DECODE Path (Orange) -->
+  <path d="M 158 126 C 190 126 188 156 214 156" fill="none" stroke="#eb6936" stroke-width="2"></path>
+  <polygon points="214,156 209,152.9 209,159.1" fill="#eb6936"></polygon>
+  <text x="222" y="159" fill="#eb6936" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="start">SGLANG DECODE</text>
+
+  <path d="M 304 156 H 317" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="317,156 313,153.52 313,158.48" fill="#eb6936"></polygon>
+  <rect x="317" y="145" width="36" height="22" rx="6" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="335" y="156.5" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op1</text>
+
+  <path d="M 354 156 H 386" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="386,156 382,153.52 382,158.48" fill="#eb6936"></polygon>
+  <rect x="387" y="145" width="36" height="22" rx="6" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="405" y="156.5" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op2</text>
+
+  <path d="M 424 156 H 456" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="456,156 452,153.52 452,158.48" fill="#eb6936"></polygon>
+  <rect x="457" y="145" width="36" height="22" rx="6" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="475" y="156.5" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op3</text>
+
+  <path d="M 494 156 H 526" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="526,156 522,153.52 522,158.48" fill="#eb6936"></polygon>
+  <rect x="527" y="145" width="36" height="22" rx="6" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="545" y="156.5" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">op4</text>
+
+  <path d="M 564 156 H 598" fill="none" stroke="#eb6936" stroke-width="2"></path>
+  <polygon points="598,156 593,152.9 593,159.1" fill="#eb6936"></polygon>
+  <text x="613" y="159" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">sᵈₜ</text>
+
+  <!-- Decode bytes (Orange) -->
+  <rect x="628" y="150" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="640" y="150" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="652" y="150" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="664" y="150" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="676" y="150" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="688" y="150" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="700" y="150" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+  <rect x="712" y="150" width="9" height="12" rx="2" fill="#f9ccbc" stroke="#eb6936" stroke-width="1"></rect>
+
+  <!-- Difference indicator (Orange) -->
+  <path d="M 734 87 H 744 V 165 H 734" fill="none" stroke="#eb6936" stroke-width="2"></path>
+  <circle cx="772" cy="126" r="17" fill="#f9ccbc"></circle>
+  <text x="772" y="127" fill="#eb6936" font-size="18" font-weight="700" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">≠</text>
+  <text x="846" y="121" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">OUTPUT BYTES</text>
+  <text x="846" y="137" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">DIFFER</text>
+
+  <!-- Walk backward (Orange) -->
+  <rect x="450" y="82" width="50" height="88" rx="10" fill="rgba(249, 204, 188, 0.3)" stroke="#eb6936" stroke-width="1.8"></rect>
+  <path d="M 772 143 V 198 H 475 V 170" fill="none" stroke="#eb6936" stroke-width="2"></path>
+  <polygon points="475,170 471.28,176 478.72,176" fill="#eb6936"></polygon>
+  <text x="637" y="191" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" letter-spacing="0.4">WALK BACKWARD</text>
+  <text x="475" y="218" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" letter-spacing="0.3">FIRST DIFFERING OPERATION</text>
+
+  <!-- Record numerical program (Orange background) -->
+  <path d="M 450 170 C 426 184 426 218 450 232" fill="none" stroke="#eb6936" stroke-width="1.8"></path>
+  <polygon points="450,232 446.9,227 453.1,227" fill="#eb6936"></polygon>
+  <rect x="32" y="232" width="896" height="140" rx="18" fill="#fffaf7" stroke="#f9ccbc" stroke-width="1.5"></rect>
+  <text x="480" y="255" fill="#eb6936" font-size="12" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" letter-spacing="0.4">RECORD THE OPERATION'S COMPLETE NUMERICAL PROGRAM</text>
+
+  <line x1="256" y1="270" x2="256" y2="354" stroke="#e1e0d9" stroke-width="1"></line>
+  <line x1="480" y1="270" x2="480" y2="354" stroke="#e1e0d9" stroke-width="1"></line>
+  <line x1="704" y1="270" x2="704" y2="354" stroke="#e1e0d9" stroke-width="1"></line>
+
+  <!-- Input bytes (Blue) -->
+  <rect x="90" y="289" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="102" y="289" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="114" y="289" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="126" y="289" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="138" y="289" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="150" y="289" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="162" y="289" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <rect x="174" y="289" width="9" height="12" rx="2" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1"></rect>
+  <text x="144" y="322" fill="#2d79d6" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">INPUT BYTES</text>
+  <text x="144" y="338" fill="#2d79d6" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">+ CONSTANTS</text>
+
+  <!-- Precision (Orange) -->
+  <rect x="303" y="282" width="52" height="26" rx="13" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.5"></rect>
+  <text x="329" fill="#eb6936" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.2" text-anchor="middle"><tspan x="329" y="299">FP32</tspan></text>
+  <path d="M 355 295 H 378" fill="none" stroke="#eb6936" stroke-width="1.5"></path>
+  <polygon points="378,295 373,291.9 373,298.1" fill="#eb6936"></polygon>
+  <rect x="378" y="282" width="58" height="26" rx="13" fill="#eb6936" stroke="#eb6936" stroke-width="1.5"></rect>
+  <text x="407" fill="#fffdf7" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.2" text-anchor="middle"><tspan x="407" y="299">BF16</tspan></text>
+  <text x="368" y="329" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">PRECISION +</text>
+  <text x="368" y="345" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">ROUNDING POINTS</text>
+
+  <!-- Addition order tree (Blue) -->
+  <circle cx="550" cy="282" r="4" fill="#2d79d6"></circle>
+  <circle cx="578" cy="282" r="4" fill="#2d79d6"></circle>
+  <circle cx="606" cy="282" r="4" fill="#2d79d6"></circle>
+  <circle cx="634" cy="282" r="4" fill="#2d79d6"></circle>
+  <path d="M 550 287 L 564 304 L 578 287" fill="none" stroke="#2d79d6" stroke-width="1.5"></path>
+  <circle cx="564" cy="304" r="4" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.5"></circle>
+  <path d="M 606 287 L 620 304 L 634 287" fill="none" stroke="#2d79d6" stroke-width="1.5"></path>
+  <circle cx="620" cy="304" r="4" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.5"></circle>
+  <path d="M 564 309 L 592 322 L 620 309" fill="none" stroke="#2d79d6" stroke-width="1.5"></path>
+  <circle cx="592" cy="322" r="5" fill="#2d79d6"></circle>
+  <text x="592" y="342" fill="#2d79d6" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">GROUPING + COMPLETE</text>
+  <text x="592" y="357" fill="#2d79d6" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">ADDITION ORDER</text>
+
+  <!-- State identity (Blue/Orange mix) -->
+  <rect x="740" y="278" width="28" height="22" rx="5" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.2"></rect>
+  <text x="754" y="289" fill="#2d79d6" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">c</text>
+  <path d="M 754 301 C 754 310 838 310 838 318" fill="none" stroke="#eb6936" stroke-width="1.2" stroke-dasharray="3 3"></path>
+  <rect x="782" y="278" width="28" height="22" rx="5" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.2"></rect>
+  <text x="796" y="289" fill="#2d79d6" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">a</text>
+  <path d="M 796 301 C 796 310 754 310 754 318" fill="none" stroke="#eb6936" stroke-width="1.2" stroke-dasharray="3 3"></path>
+  <rect x="824" y="278" width="28" height="22" rx="5" fill="#b9d2f3" stroke="#2d79d6" stroke-width="1.2"></rect>
+  <text x="838" y="289" fill="#2d79d6" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">b</text>
+  <path d="M 838 301 C 838 310 796 310 796 318" fill="none" stroke="#eb6936" stroke-width="1.2" stroke-dasharray="3 3"></path>
+  <rect x="740" y="318" width="28" height="22" rx="5" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="754" y="329" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">a</text>
+  <rect x="782" y="318" width="28" height="22" rx="5" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="796" y="329" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">b</text>
+  <rect x="824" y="318" width="28" height="22" rx="5" fill="#f9ccbc" stroke="#eb6936" stroke-width="1.2"></rect>
+  <text x="838" y="329" fill="#eb6936" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" dominant-baseline="middle">c</text>
+  <text x="796" y="347" fill="#eb6936" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">STATE / VALUE IDENTITY</text>
+  <text x="796" y="361" fill="#eb6936" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">+ LOGICAL ORDER</text>
+
+  <!-- Final steps -->
+  <path d="M 167 373 V 390" fill="none" stroke="#2d79d6" stroke-width="1.8"></path>
+  <polygon points="167,390 163.9,385 170.1,385" fill="#2d79d6"></polygon>
+  <rect x="42" y="390" width="250" height="50" rx="16" fill="#f8fbff" stroke="#2d79d6" stroke-width="1.5"></rect>
+  <text x="167" y="408" fill="#2d79d6" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">MINIMIZE THE MISMATCH</text>
+  <text x="167" y="427" fill="rgb(82, 81, 78)" font-size="10" font-weight="500" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle">one row · one reduction · one state update</text>
+
+  <rect x="348" y="390" width="214" height="50" rx="16" fill="#fffaf7" stroke="#eb6936" stroke-width="1.5"></rect>
+  <text x="455" fill="#eb6936" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.2" text-anchor="middle"><tspan x="455" y="419">ALIGN THE CALCULATION</tspan></text>
+
+  <rect x="628" y="390" width="278" height="50" rx="16" fill="#3b8e2c" stroke="#3b8e2c" stroke-width="1.5"></rect>
+  <text x="767" fill="#fffdf7" font-size="11" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.2" text-anchor="middle"><tspan x="767" y="419">BYTE-EQUAL AT PRODUCTION SHAPE</tspan></text>
+
+  <path d="M 292 415 H 347" fill="none" stroke="#2d79d6" stroke-width="2"></path>
+  <polygon points="347,415 341,411.28 341,418.72" fill="#2d79d6"></polygon>
+  <path d="M 562 415 H 627" fill="none" stroke="#3b8e2c" stroke-width="2"></path>
+  <polygon points="627,415 621,411.28 621,418.72" fill="#3b8e2c"></polygon>
+
+  <!-- After equality (Green) -->
+  <path d="M 767 440 V 459 C 767 472 700 472 680 478 H 330" fill="none" stroke="#3b8e2c" stroke-width="1.8"></path>
+  <line x1="360" y1="478" x2="360" y2="486" stroke="#3b8e2c" stroke-width="1.5"></line>
+  <line x1="520" y1="478" x2="520" y2="486" stroke="#3b8e2c" stroke-width="1.5"></line>
+  <line x1="680" y1="478" x2="680" y2="486" stroke="#3b8e2c" stroke-width="1.5"></line>
+  <text x="520" y="470" fill="#3b8e2c" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" text-anchor="middle" letter-spacing="0.35">ONLY AFTER EQUALITY · TEST A CHANGE AND COMPARE AGAIN</text>
+
+  <rect x="300" y="486" width="120" height="30" rx="15" fill="#bfe3b4" stroke="#3b8e2c" stroke-width="1.5"></rect>
+  <text x="360" fill="#3b8e2c" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.2" text-anchor="middle"><tspan x="360" y="505">SCHEDULING</tspan></text>
+
+  <rect x="460" y="486" width="120" height="30" rx="15" fill="#bfe3b4" stroke="#3b8e2c" stroke-width="1.5"></rect>
+  <text x="520" fill="#3b8e2c" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.2" text-anchor="middle"><tspan x="520" y="505">STORAGE LAYOUT</tspan></text>
+
+  <rect x="620" y="486" width="120" height="30" rx="15" fill="#bfe3b4" stroke="#3b8e2c" stroke-width="1.5"></rect>
+  <text x="680" fill="#3b8e2c" font-size="10.5" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.2" text-anchor="middle"><tspan x="680" y="505">TRANSPORT</tspan></text>
+
+  <path d="M 740 501 H 934 V 415 H 907" fill="none" stroke="#3b8e2c" stroke-width="1.5" stroke-dasharray="5 4"></path>
+  <polygon points="907,415 913,411.28 913,418.72" fill="#3b8e2c"></polygon>
+  <text x="835" y="480" fill="#3b8e2c" font-size="10" font-weight="600" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" letter-spacing="0.35" text-anchor="middle">REVERIFY OUTPUT + STATE BYTES</text>
+</svg>

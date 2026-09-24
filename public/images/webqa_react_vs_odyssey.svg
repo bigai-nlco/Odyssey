@@ -1,0 +1,99 @@
+<svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg" role="img">
+<defs>
+<mask id="webqa-text-gaps" maskUnits="userSpaceOnUse">
+<rect x="0" y="0" width="900" height="450" fill="white"/>
+<rect x="26" y="12" width="180" height="28" fill="black" rx="2"/>
+<rect x="26" y="42" width="334" height="22" fill="black" rx="2"/>
+<rect x="30" y="348" width="17" height="22" fill="black" rx="2"/>
+<rect x="25" y="291" width="21" height="22" fill="black" rx="2"/>
+<rect x="22" y="235" width="24" height="22" fill="black" rx="2"/>
+<rect x="22" y="178" width="24" height="22" fill="black" rx="2"/>
+<rect x="23" y="122" width="23" height="22" fill="black" rx="2"/>
+<rect x="22" y="65" width="24" height="22" fill="black" rx="2"/>
+<rect x="150" y="366" width="72" height="24" fill="black" rx="2"/>
+<rect x="430" y="366" width="72" height="24" fill="black" rx="2"/>
+<rect x="710" y="366" width="72" height="24" fill="black" rx="2"/>
+<rect x="165" y="399" width="180" height="22" fill="black" rx="2"/>
+<rect x="445" y="399" width="180" height="22" fill="black" rx="2"/>
+<rect x="725" y="399" width="180" height="22" fill="black" rx="2"/>
+<rect x="638" y="7" width="95" height="22" fill="black" rx="2"/>
+<rect x="638" y="29" width="149" height="22" fill="black" rx="2"/>
+</mask>
+</defs>
+
+<title>WebQA scores, ReAct vs Odyssey, at 4B, 8B and 14B scale</title>
+<desc>Grouped bar chart with three model-size groups (4B, 8B, 14B). Each group shows WebQA accuracy for the ReAct base agent (light) and the corresponding RL-trained Odyssey agent (dark), with a short vertical line on each bar showing result variance. Odyssey scores higher than ReAct at every scale.</desc>
+
+<text x="30" y="34" font-size="20" font-weight="500" fill="rgb(11, 11, 11)">WebQA</text>
+<text x="30" y="58" font-size="14" fill="rgb(82, 81, 78)">Accuracy averaged by four runs, Base (ReAct) vs. Mixed RL (Odyssey).</text>
+
+<g font-size="14" fill="rgb(137, 135, 129)">
+<line x1="55" y1="360" x2="860" y2="360" stroke="#c3c2b7" stroke-width="1"/>
+<g stroke="#e1e0d9" stroke-width="1">
+<line x1="55" y1="303.3" x2="860" y2="303.3"/>
+<line x1="55" y1="246.7" x2="860" y2="246.7"/>
+<line x1="55" y1="190.0" x2="860" y2="190.0" mask="url(#webqa-text-gaps)"/>
+<line x1="55" y1="133.3" x2="860" y2="133.3" mask="url(#webqa-text-gaps)"/>
+<line x1="55" y1="76.7" x2="860" y2="76.7"/>
+</g>
+<text x="42" y="365" text-anchor="end">0</text>
+<text x="42" y="308" text-anchor="end">15</text>
+<text x="42" y="251" text-anchor="end">30</text>
+<text x="42" y="195" text-anchor="end">45</text>
+<text x="42" y="138" text-anchor="end">60</text>
+<text x="42" y="81" text-anchor="end">75</text>
+</g>
+
+<line x1="380" y1="70" x2="380" y2="360" stroke="rgba(11, 11, 11, 0.1)" stroke-width="1"/>
+<line x1="660" y1="70" x2="660" y2="360" stroke="rgba(11, 11, 11, 0.1)" stroke-width="1"/>
+
+<!-- 4B Group -->
+<g>
+<path d="M140,360 L140,198.7 Q140,192.7 146,192.7 L216,192.7 Q222,192.7 222,198.7 L222,360 Z" fill="#bad2f3"/>
+<line x1="179" y1="187.5" x2="179" y2="197.5" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<text x="179" y="179" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)">41.3</text>
+
+<path d="M230,360 L230,146.5 Q230,140.5 236,140.5 L306,140.5 Q312,140.5 312,146.5 L312,360 Z" fill="#2c79d6"/>
+<line x1="268" y1="137.2" x2="268" y2="145.8" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<text x="268" y="129" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)">48.0</text>
+
+<text x="226" y="384" text-anchor="middle" font-size="16" fill="rgb(82, 81, 78)">WebQA</text>
+</g>
+<text x="226" y="416" text-anchor="middle" font-size="15" font-weight="500" fill="#2c79d6">ReAct (Q3-4B) / Odyssey-Nano</text>
+
+<!-- 8B Group -->
+<g>
+<path d="M420,360 L420,186.3 Q420,180.3 426,180.3 L496,180.3 Q502,180.3 502,186.3 L502,360 Z" fill="#f9ccbc"/>
+<line x1="459" y1="175.8" x2="459" y2="185.2" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<text x="459" y="167" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)">43.8</text>
+
+<path d="M510,360 L510,113.7 Q510,107.7 516,107.7 L586,107.7 Q592,107.7 592,113.7 L592,360 Z" fill="#eb6935"/>
+<line x1="548" y1="103.5" x2="548" y2="112.5" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<text x="548" y="95" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)">53.5</text>
+
+<text x="506" y="384" text-anchor="middle" font-size="16" fill="rgb(82, 81, 78)">WebQA</text>
+</g>
+<text x="506" y="416" text-anchor="middle" font-size="15" font-weight="500" fill="#eb6935">ReAct (Q3-8B) / Odyssey-Mini</text>
+
+<!-- 14B Group -->
+<g>
+<path d="M700,360 L700,177.0 Q700,171.0 706,171.0 L776,171.0 Q782,171.0 782,177.0 L782,360 Z" fill="#bfe3b5"/>
+<line x1="739" y1="168.3" x2="739" y2="175.7" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<text x="739" y="160" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)">45.5</text>
+
+<path d="M790,360 L790,91.3 Q790,85.3 796,85.3 L866,85.3 Q872,85.3 872,91.3 L872,360 Z" fill="#3b8f2c"/>
+<line x1="828" y1="82.5" x2="828" y2="90.5" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<text x="828" y="74" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)">56.8</text>
+
+<text x="786" y="384" text-anchor="middle" font-size="16" fill="rgb(82, 81, 78)">WebQA</text>
+</g>
+<text x="786" y="416" text-anchor="middle" font-size="15" font-weight="500" fill="#3b8f2c">ReAct (Q3-14B) / Odyssey-Mid</text>
+
+<!-- Legend -->
+<g font-size="14" fill="rgb(82, 81, 78)">
+<rect x="620" y="18" width="16" height="16" rx="3" fill="#c3c2b7"/>
+<text x="642" y="31">Base (ReAct)</text>
+<rect x="620" y="40" width="16" height="16" rx="3" fill="#5f5e5a"/>
+<text x="642" y="53">Mixed RL (Odyssey)</text>
+</g>
+</svg>

@@ -1,0 +1,65 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Training Rollout Logprob Absolute Difference</title>
+<desc>Training dynamics showing the absolute difference in log probabilities during rollout, indicating training-inference consistency.</desc>
+
+<text x="30" y="34" font-size="20" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">Training Rollout Logprob Consistency</text>
+<text x="30" y="58" font-size="14" fill="rgb(82, 81, 78)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">Absolute difference between training and rollout log probabilities (lower is better)</text>
+
+<!-- Y-axis grid lines -->
+<g stroke="#e1e0d9" stroke-width="1">
+<line x1="80" y1="440.0" x2="860" y2="440.0"/>
+<line x1="80" y1="390.0" x2="860" y2="390.0"/>
+<line x1="80" y1="340.0" x2="860" y2="340.0"/>
+<line x1="80" y1="290.0" x2="860" y2="290.0"/>
+<line x1="80" y1="240.0" x2="860" y2="240.0"/>
+<line x1="80" y1="190.0" x2="860" y2="190.0"/>
+<line x1="80" y1="140.0" x2="860" y2="140.0"/>
+<line x1="80" y1="90.0" x2="860" y2="90.0"/>
+</g>
+
+<g font-size="15" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">
+<text x="67" y="445.0" text-anchor="end">0.000</text>
+<text x="67" y="395.0" text-anchor="end">0.002</text>
+<text x="67" y="345.0" text-anchor="end">0.004</text>
+<text x="67" y="295.0" text-anchor="end">0.006</text>
+<text x="67" y="245.0" text-anchor="end">0.008</text>
+<text x="67" y="195.0" text-anchor="end">0.010</text>
+<text x="67" y="145.0" text-anchor="end">0.012</text>
+<text x="67" y="95.0" text-anchor="end">0.014</text>
+</g>
+
+<text x="12" y="265.0" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" transform="rotate(-90 12 265.0)">Logprob Abs Diff</text>
+
+<g font-size="15" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">
+<text x="80.0" y="465" text-anchor="middle">0</text>
+<text x="236.0" y="465" text-anchor="middle">40</text>
+<text x="392.0" y="465" text-anchor="middle">80</text>
+<text x="548.0" y="465" text-anchor="middle">120</text>
+<text x="704.0" y="465" text-anchor="middle">160</text>
+<text x="860.0" y="465" text-anchor="middle">200</text>
+</g>
+
+<text x="470.0" y="500" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">Training Step</text>
+
+<!-- Zero reference line -->
+<line x1="80" y1="440.0" x2="860" y2="440.0" stroke="#3b8e2c" stroke-width="2" stroke-dasharray="5,5"/>
+
+<!-- Line chart -->
+<g stroke="#eb6936" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 80.00,146.85 L 83.90,142.30 L 87.80,122.91 L 91.70,143.69 L 95.60,134.02 L 99.50,159.98 L 103.40,115.95 L 107.30,140.31 L 111.20,126.96 L 115.10,115.02 L 119.00,133.47 L 122.90,131.75 L 126.80,147.46 L 130.70,145.75 L 134.60,122.76 L 138.50,130.58 L 142.40,125.50 L 146.30,143.42 L 150.20,122.22 L 154.10,126.58 L 158.00,139.45 L 161.90,134.32 L 165.80,129.69 L 169.70,142.52 L 173.60,127.29 L 177.50,121.94 L 181.40,145.00 L 185.30,120.12 L 189.20,133.01 L 193.10,125.09 L 197.00,125.65 L 200.90,127.16 L 204.80,133.79 L 208.70,118.75 L 212.60,134.14 L 216.50,125.06 L 220.40,141.57 L 224.30,132.24 L 228.20,130.99 L 232.10,153.61 L 236.00,128.45 L 239.90,135.07 L 243.80,134.33 L 247.70,118.36 L 251.60,128.32 L 255.50,137.04 L 259.40,121.17 L 263.30,139.94 L 267.20,135.61 L 271.10,142.96 L 275.00,128.49 L 278.90,144.50 L 282.80,122.97 L 286.70,156.23 L 290.60,148.67 L 294.50,129.43 L 298.40,132.70 L 302.30,124.56 L 306.20,148.55 L 310.10,131.54 L 314.00,150.04 L 317.90,152.38 L 321.80,137.41 L 325.70,125.42 L 329.60,153.50 L 333.50,149.64 L 337.40,155.65 L 341.30,149.44 L 345.20,164.36 L 349.10,139.61 L 353.00,153.50 L 356.90,142.43 L 360.80,170.73 L 364.70,126.20 L 368.60,136.44 L 372.50,121.47 L 376.40,149.34 L 380.30,135.60 L 384.20,158.92 L 388.10,139.26 L 392.00,132.37 L 395.90,130.81 L 399.80,130.51 L 403.70,140.78 L 407.60,139.32 L 411.50,118.23 L 415.40,131.90 L 419.30,130.18 L 423.20,134.40 L 427.10,136.89 L 431.00,121.93 L 434.90,126.96 L 438.80,128.80 L 442.70,123.19 L 446.60,145.53 L 450.50,146.31 L 454.40,144.54 L 458.30,121.41 L 462.20,131.16 L 466.10,126.85 L 470.00,131.83 L 473.90,144.82 L 477.80,154.63 L 481.70,144.14 L 485.60,151.58 L 489.50,145.21 L 493.40,140.84 L 497.30,144.40 L 501.20,150.86 L 505.10,140.41 L 509.00,162.58 L 512.90,134.47 L 516.80,151.47 L 520.70,151.73 L 524.60,188.65 L 528.50,149.93 L 532.40,173.59 L 536.30,137.33 L 540.20,179.08 L 544.10,147.59 L 548.00,159.86 L 551.90,160.17 L 555.80,152.01 L 559.70,146.30 L 563.60,161.78 L 567.50,170.64 L 571.40,142.51 L 575.30,143.67 L 579.20,139.63 L 583.10,165.75 L 587.00,166.72 L 590.90,154.19 L 594.80,152.80 L 598.70,149.36 L 602.60,169.01 L 606.50,165.35 L 610.40,145.58 L 614.30,167.81 L 618.20,165.40 L 622.10,157.58 L 626.00,172.96 L 629.90,184.88 L 633.80,165.73 L 637.70,168.09 L 641.60,185.95 L 645.50,163.92 L 649.40,148.49 L 653.30,157.46 L 657.20,172.52 L 661.10,170.12 L 665.00,163.27 L 668.90,164.38 L 672.80,180.23 L 676.70,161.43 L 680.60,159.57 L 684.50,180.28 L 688.40,173.34 L 692.30,165.78 L 696.20,208.02 L 700.10,217.69 L 704.00,182.89 L 707.90,175.58 L 711.80,178.55 L 715.70,168.94 L 719.60,186.47 L 723.50,189.69 L 727.40,176.50 L 731.30,197.14 L 735.20,181.55 L 739.10,198.06 L 743.00,180.32 L 746.90,195.49 L 750.80,198.63 L 754.70,200.13 L 758.60,183.27 L 762.50,171.62 L 766.40,171.36 L 770.30,196.76 L 774.20,227.98 L 782.00,177.44 L 785.90,189.63 L 789.80,205.42 L 793.70,204.45 L 797.60,214.88 L 801.50,188.48 L 805.40,182.62 L 809.30,193.90 L 813.20,180.46 L 817.10,182.27 L 821.00,198.52 L 824.90,176.41 L 828.80,191.64 L 832.70,189.70 L 836.60,221.24 L 840.50,211.95 L 844.40,201.71 L 848.30,201.57 L 852.20,228.25 L 856.10,213.13"/>
+</g>
+
+<!-- Annotations -->
+<g font-size="13" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">
+<line x1="480.0" y1="95.83137716396146" x2="470.0" y2="131.83137716396146" stroke="#eb6936" stroke-width="1.5" opacity="0.7"/>
+<circle cx="470.0" cy="131.83137716396146" r="4" fill="#eb6936" opacity="0.9"/>
+<text x="480.0" y="91.83137716396146" fill="#eb6936" font-weight="500">w/o Bitwise Parity</text>
+<text x="100" y="170.01867632473153" fill="rgb(82, 81, 78)" font-size="12">Initial: 0.01173 → Final: 0.00907</text>
+<text x="680" y="430.0" fill="#3b8e2c" font-weight="500">Perfect consistency (0.0)</text>
+<line x1="620" y1="50" x2="650" y2="50" stroke="#eb6936" stroke-width="2.5"/>
+<text x="658" y="55" fill="rgb(82, 81, 78)" font-size="13">Odyssey-Nano (w/o Faster-TOP)</text>
+<line x1="620" y1="70" x2="650" y2="70" stroke="#3b8e2c" stroke-width="2.5" stroke-dasharray="5,3"/>
+<text x="658" y="75" fill="rgb(82, 81, 78)" font-size="13">Odyssey-Nano</text>
+</g>
+
+</svg>

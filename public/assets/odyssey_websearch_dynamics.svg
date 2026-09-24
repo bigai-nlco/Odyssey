@@ -1,0 +1,123 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Web Search Dynamics: Recovered Problems and Token Usage</title>
+<desc>Combined bar and line chart showing number of recovered problems (bars) and average tokens (line) across different search count changes after Odyssey-RL training.</desc>
+
+<text x="30" y="80" font-size="20" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">Deep Search Dynamics</text>
+<text x="30" y="104" font-size="14" fill="rgb(82, 81, 78)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">Recovered problems and avg. tokens by change in search count (Post Odyssey-RL vs. Pre. Odyssey-RL)</text>
+
+<!-- Y-axis (Left) - Number of Recovered Problems -->
+<g font-size="15" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">
+<line x1="80" y1="470" x2="820" y2="470" stroke="#c3c2b7" stroke-width="1"/>
+<g stroke="#e1e0d9" stroke-width="1">
+<line x1="80" y1="413.3" x2="820" y2="413.3"/>
+<line x1="80" y1="356.7" x2="820" y2="356.7"/>
+<line x1="80" y1="300.0" x2="820" y2="300.0"/>
+<line x1="80" y1="243.3" x2="820" y2="243.3"/>
+<line x1="80" y1="186.7" x2="820" y2="186.7"/>
+<line x1="80" y1="130.0" x2="820" y2="130.0"/>
+</g>
+<text x="67" y="475" text-anchor="end">0</text>
+<text x="67" y="418" text-anchor="end">10</text>
+<text x="67" y="361" text-anchor="end">20</text>
+<text x="67" y="305" text-anchor="end">30</text>
+<text x="67" y="248" text-anchor="end">40</text>
+<text x="67" y="192" text-anchor="end">50</text>
+<text x="67" y="135" text-anchor="end">60</text>
+</g>
+
+<!-- Y-axis label (Left) -->
+<text x="20" y="300" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" transform="rotate(-90 20 300)">Number of Recovered Problems</text>
+
+<!-- Y-axis (Right) - Avg. Tokens -->
+<g font-size="15" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">
+<text x="833" y="475" text-anchor="start">0</text>
+<text x="833" y="418" text-anchor="start">1,000</text>
+<text x="833" y="361" text-anchor="start">2,000</text>
+<text x="833" y="305" text-anchor="start">3,000</text>
+<text x="833" y="248" text-anchor="start">4,000</text>
+<text x="833" y="192" text-anchor="start">5,000</text>
+</g>
+
+<!-- Y-axis label (Right) -->
+<text x="880" y="300" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif" transform="rotate(90 880 300)">Avg. Tokens</text>
+
+<!-- Bar chart data -->
+<!-- 1-2: 34 problems -->
+<g>
+<path d="M175,470 L175,141.8 Q175,135.8 181,135.8 L219,135.8 Q225,135.8 225,141.8 L225,470 Z" fill="#f9ccbc"/>
+</g>
+
+<!-- 3-4: 35 problems -->
+<g>
+<path d="M335,470 L335,138.9 Q335,132.9 341,132.9 L379,132.9 Q385,132.9 385,138.9 L385,470 Z" fill="#f9ccbc"/>
+</g>
+
+<!-- 5-6: 25 problems -->
+<g>
+<path d="M495,470 L495,255.8 Q495,249.8 501,249.8 L539,249.8 Q545,249.8 545,255.8 L545,470 Z" fill="#f9ccbc"/>
+</g>
+
+<!-- 7-8: 8 problems -->
+<g>
+<path d="M655,470 L655,376.5 Q655,370.5 661,370.5 L699,370.5 Q705,370.5 705,376.5 L705,470 Z" fill="#f9ccbc"/>
+</g>
+
+<!-- Bar value labels -->
+<text x="200" y="128" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">34</text>
+<text x="360" y="125" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">35</text>
+<text x="520" y="242" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">25</text>
+<text x="680" y="363" text-anchor="middle" font-size="15" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', sans-serif">8</text>
+
+<!-- X-axis labels -->
+<text x="200" y="494" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">1-2</text>
+<text x="360" y="494" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">3-4</text>
+<text x="520" y="494" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">5-6</text>
+<text x="680" y="494" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">7-8</text>
+
+<!-- X-axis label -->
+<text x="450" y="526" text-anchor="middle" font-size="17" font-weight="500" fill="rgb(11, 11, 11)" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">Change in Search Count (Post Odyssey-RL vs. Pre. Odyssey-RL)</text>
+
+<!-- Line chart for Avg. Tokens -->
+<!-- Scale: 5000 tokens = 278px (470-192), 1 token = 0.0556px from y=470 -->
+<g stroke="#eb6935" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 200,228.5 L 360,266.7 L 520,320.0 L 680,393.1"/>
+</g>
+
+<!-- Data points with glow -->
+<defs>
+<filter id="glow">
+<feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+<feMerge>
+<feMergeNode in="coloredBlur"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
+</defs>
+
+<g fill="#eb6935" filter="url(#glow)">
+<circle cx="200" cy="228.5" r="5"/>
+<circle cx="360" cy="266.7" r="5"/>
+<circle cx="520" cy="320.0" r="5"/>
+<circle cx="680" cy="393.1" r="5"/>
+</g>
+
+<!-- Line value labels -->
+<g font-size="14" font-weight="500" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">
+<text x="200" y="215" text-anchor="middle" fill="#eb6935">4,343.9</text>
+
+<text x="360" y="253" text-anchor="middle" fill="#eb6935">3,653.5</text>
+
+<text x="520" y="307" text-anchor="middle" fill="#eb6935">2,699.6</text>
+
+<text x="680" y="380" text-anchor="middle" fill="#eb6935">1,384.8</text>
+</g>
+
+<!-- Legend -->
+<g font-size="14" font-family="anthropic-sans, -apple-system, 'system-ui', 'Segoe UI', sans-serif">
+<rect x="700" y="80" width="16" height="16" rx="3" fill="#f9ccbc"/>
+<text x="722" y="93" fill="#f9ccbc">Recovered Problems</text>
+<line x1="700" y1="110" x2="716" y2="110" stroke="#eb6935" stroke-width="4.5" stroke-linecap="round"/>
+<circle cx="708" cy="110" r="5" fill="#eb6935"/>
+<text x="722" y="115" fill="#eb6935">Avg. Tokens</text>
+</g>
+</svg>

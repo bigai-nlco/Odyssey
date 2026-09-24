@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Abstract blue and green landscape">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#e5f3ff"/><stop offset="1" stop-color="#f8fafb"/></linearGradient>
+    <linearGradient id="hill" x1="0" x2="1"><stop stop-color="#2b7a78"/><stop offset="1" stop-color="#75b798"/></linearGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#sky)"/>
+  <circle cx="926" cy="122" r="48" fill="#f3cb72"/>
+  <path d="M0 342C177 272 293 314 451 247s254-52 374 19 242 77 375-6v260H0Z" fill="url(#hill)"/>
+  <path d="M0 420c184-59 295-44 474-13 194 34 336 30 726-63v176H0Z" fill="#174a59" opacity=".95"/>
+</svg>
