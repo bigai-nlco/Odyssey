@@ -470,53 +470,181 @@ mjx-container[jax="CHTML"][display="true"] {
 @media (max-width: 767px) {
   .site-header { padding: .75rem 1rem; }
 
+  /* Better font size for mobile readability */
+  html {
+    font-size: 15px !important;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Article layout - better padding */
+  .article-header {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .article-body {
+    padding: 1.5rem 1rem 0;
+  }
+
+  /* Improve paragraph readability */
+  .article-body p {
+    line-height: 1.75em;
+  }
+
   /* Images - ensure they fit on mobile */
   figure img,
   .article-body img {
     max-width: 100% !important;
     height: auto !important;
     width: 100% !important;
+    object-fit: contain;
+  }
+
+  /* Prevent image overflow */
+  figure,
+  .article-body figure {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden;
   }
 
   /* Figure captions - better readability */
   figcaption {
-    font-size: 11px !important;
-    line-height: 1.5em !important;
-    padding: 0.5rem 0 !important;
+    font-size: 12px !important;
+    line-height: 1.6em !important;
+    padding: 0.6rem 0 !important;
   }
 
-  /* L-page figures on mobile */
+  /* L-page figures on mobile - full bleed */
   figure.l-page {
-    margin-left: -8px !important;
-    margin-right: -8px !important;
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    width: calc(100% + 2rem) !important;
+    max-width: calc(100% + 2rem) !important;
   }
 
-  /* Tables - horizontal scroll */
+  figure.l-page img {
+    border-radius: 0;
+  }
+
+  /* Tables - horizontal scroll with better UX */
   .article-body table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    font-size: 12px !important;
+    font-size: 13px !important;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+    max-width: calc(100% + 2rem);
+  }
+
+  .article-body th,
+  .article-body td {
+    padding: .6rem .7rem;
+    white-space: nowrap;
   }
 
   .table-caption {
-    font-size: 11px !important;
-    padding: 0 8px;
+    font-size: 12px !important;
+    padding: 0 1rem;
+    margin-bottom: 0.8rem;
   }
 
-  /* Headers - reduce size on mobile */
+  /* Headers - optimized hierarchy */
+  .article-header h1 {
+    font-size: 28px !important;
+    line-height: 1.15em !important;
+  }
+
+  .dek {
+    font-size: 1.05rem !important;
+    line-height: 1.6em !important;
+  }
+
   .article-body h2 {
-    font-size: 1.6em !important;
-    margin-top: 1.5em !important;
+    font-size: 22px !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1.2rem !important;
   }
 
   .article-body h3 {
-    font-size: 1.3em !important;
-    margin-top: 1.3em !important;
+    font-size: 18px !important;
+    margin-top: 1.8rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .article-body h4 {
-    font-size: 1.1em !important;
+    font-size: 15px !important;
+    margin-top: 1.5rem !important;
+  }
+
+  /* Code blocks - better mobile experience */
+  .article-body pre {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+    font-size: 13px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .article-body pre code {
+    font-size: 13px;
+  }
+
+  /* Lists - better spacing */
+  .article-body ul,
+  .article-body ol {
+    padding-left: 1.5rem;
+  }
+
+  .article-body li {
+    margin-bottom: 0.8em;
+    line-height: 1.7em;
+  }
+
+  /* Training charts grid - mobile optimization */
+  .training-charts-grid {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    width: calc(100% + 2rem) !important;
+  }
+
+  /* Chart containers - prevent overflow */
+  .chart-container {
+    height: clamp(220px, 50vw, 320px) !important;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* Backmatter - better mobile layout */
+  .backmatter {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+
+  .backmatter li {
+    margin-bottom: 0.6rem;
+  }
+
+  /* Math equations - ensure they don't overflow */
+  mjx-container[jax="CHTML"][display="true"] {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  /* Footer adjustments */
+  .site-footer {
+    font-size: 0.8rem;
+    padding: 1.2rem 1rem;
   }
 }
 
@@ -547,30 +675,77 @@ mjx-container[jax="CHTML"][display="true"] {
   }
 }
 
-/* Small phones - aggressive optimization */
+/* Small phones - enhanced optimization (iPhone SE, small Android) */
 @media (max-width: 480px) {
   html {
-    font-size: 13px !important;
+    font-size: 14px !important;
+  }
+
+  .article-header {
+    padding: 1.2rem 0.8rem 0.8rem;
   }
 
   .article-body {
-    padding: 0 12px !important;
+    padding: 1.2rem 0.8rem 0 !important;
+  }
+
+  .article-header h1 {
+    font-size: 24px !important;
+  }
+
+  .dek {
+    font-size: 1rem !important;
   }
 
   .article-body h2 {
-    font-size: 1.4em !important;
+    font-size: 20px !important;
   }
 
   .article-body h3 {
-    font-size: 1.2em !important;
+    font-size: 16px !important;
+  }
+
+  .article-body h4 {
+    font-size: 14px !important;
   }
 
   figcaption {
-    font-size: 10px !important;
+    font-size: 11px !important;
   }
 
   .table-caption {
-    font-size: 10px !important;
+    font-size: 11px !important;
+  }
+
+  /* Adjust margins for smaller screens */
+  figure.l-page {
+    margin-left: -0.8rem !important;
+    margin-right: -0.8rem !important;
+    width: calc(100% + 1.6rem) !important;
+  }
+
+  .article-body table {
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+    width: calc(100% + 1.6rem);
+    font-size: 12px !important;
+  }
+
+  .article-body pre {
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+    font-size: 12px;
+  }
+
+  /* Chart container adjustments */
+  .chart-container {
+    height: clamp(200px, 55vw, 280px) !important;
+  }
+
+  .training-charts-grid {
+    margin-left: -0.8rem !important;
+    margin-right: -0.8rem !important;
+    width: calc(100% + 1.6rem) !important;
   }
 }
 
@@ -579,6 +754,73 @@ mjx-container[jax="CHTML"][display="true"] {
   figure img {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+  }
+}
+
+/* iPhone notch and safe areas */
+@supports (padding: max(0px)) {
+  .site-header {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .article-header,
+  .article-body {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger touch targets for links */
+  .article-body a {
+    padding: 2px 0;
+    margin: -2px 0;
+  }
+
+  /* Better tap highlighting */
+  a, button, .terminal-tab, .control-button {
+    -webkit-tap-highlight-color: rgba(0, 66, 118, 0.1);
+    tap-highlight-color: rgba(0, 66, 118, 0.1);
+  }
+
+  /* Smoother scrolling */
+  .article-body,
+  .terminal-content,
+  .step-content {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent text selection on interactive elements */
+  .terminal-tab,
+  .control-button,
+  .step-header {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 767px) and (orientation: landscape) {
+  html {
+    font-size: 14px;
+  }
+
+  .terminal-content {
+    max-height: 350px !important;
+  }
+
+  .chart-container {
+    height: clamp(200px, 40vh, 280px) !important;
+  }
+}
+
+/* Extra wide screens - limit content width */
+@media (min-width: 1920px) {
+  .article-layout {
+    max-width: 1400px;
   }
 }
 /* Table caption styling - matches figure caption style */
