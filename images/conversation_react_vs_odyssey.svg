@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc" font-family="anthropic-sans, -apple-system, system-ui, Segoe UI, sans-serif">
+<title id="title">Conversation: VitaBench &amp; τ²-Bench</title>
+<desc id="desc">Reported Pass@1 for ReAct and Odyssey at 4B, 8B and 14B. Error bars are randomly sized layout placeholders, not measured uncertainty.</desc>
+<text x="30.0" y="34.0" font-size="20" font-weight="500" fill="#0b0b0b" text-anchor="start">Conversation: VitaBench &amp; τ²-Bench</text>
+<text x="30.0" y="58.0" font-size="14" font-weight="400" fill="#52514e" text-anchor="start">Reported Pass@1 (%), Base (ReAct) vs. Mixed RL (Odyssey).</text>
+<defs><mask id="label-gaps"><rect width="900" height="520" fill="white"/><rect x="79.10" y="391.03" width="42" height="22" fill="black" rx="2"/><rect x="123.10" y="382.22" width="42" height="22" fill="black" rx="2"/><rect x="213.20" y="254.69" width="42" height="22" fill="black" rx="2"/><rect x="257.20" y="212.98" width="42" height="22" fill="black" rx="2"/><rect x="347.40" y="396.65" width="42" height="22" fill="black" rx="2"/><rect x="391.40" y="354.70" width="42" height="22" fill="black" rx="2"/><rect x="481.50" y="186.77" width="42" height="22" fill="black" rx="2"/><rect x="525.50" y="141.79" width="42" height="22" fill="black" rx="2"/><rect x="615.70" y="347.77" width="42" height="22" fill="black" rx="2"/><rect x="659.70" y="364.93" width="42" height="22" fill="black" rx="2"/><rect x="749.80" y="171.51" width="42" height="22" fill="black" rx="2"/><rect x="793.80" y="186.76" width="42" height="22" fill="black" rx="2"/></mask></defs>
+<g stroke="#e1e0d9" stroke-width="1" mask="url(#label-gaps)">
+<line x1="55" y1="373.33" x2="860" y2="373.33"/>
+<line x1="55" y1="316.67" x2="860" y2="316.67"/>
+<line x1="55" y1="260.00" x2="860" y2="260.00"/>
+<line x1="55" y1="203.33" x2="860" y2="203.33"/>
+<line x1="55" y1="146.67" x2="860" y2="146.67"/>
+<line x1="55" y1="90.00" x2="860" y2="90.00"/>
+</g><line x1="55" y1="430" x2="860" y2="430" stroke="#c3c2b7" stroke-width="1"/>
+<text x="42.0" y="435.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">0</text>
+<text x="42.0" y="378.3" font-size="14" font-weight="400" fill="#898781" text-anchor="end">10</text>
+<text x="42.0" y="321.7" font-size="14" font-weight="400" fill="#898781" text-anchor="end">20</text>
+<text x="42.0" y="265.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">30</text>
+<text x="42.0" y="208.3" font-size="14" font-weight="400" fill="#898781" text-anchor="end">40</text>
+<text x="42.0" y="151.7" font-size="14" font-weight="400" fill="#898781" text-anchor="end">50</text>
+<text x="42.0" y="95.0" font-size="14" font-weight="400" fill="#898781" text-anchor="end">60</text>
+<path d="M82.10,430 L82.10,424.33 Q82.10,418.67 87.77,418.67 L112.43,418.67 Q118.10,418.67 118.10,424.33 L118.10,430 Z" fill="#bad2f3"/>
+<line class="placeholder-error-bar" x1="100.10" y1="415.03" x2="100.10" y2="422.30" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M126.10,430 L126.10,418.43 Q126.10,412.43 132.10,412.43 L156.10,412.43 Q162.10,412.43 162.10,418.43 L162.10,430 Z" fill="#2c79d6"/>
+<line class="placeholder-error-bar" x1="144.10" y1="406.22" x2="144.10" y2="418.65" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M216.20,430 L216.20,289.23 Q216.20,283.23 222.20,283.23 L246.20,283.23 Q252.20,283.23 252.20,289.23 L252.20,430 Z" fill="#bad2f3"/>
+<line class="placeholder-error-bar" x1="234.20" y1="278.69" x2="234.20" y2="287.77" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M260.20,430 L260.20,246.73 Q260.20,240.73 266.20,240.73 L290.20,240.73 Q296.20,240.73 296.20,246.73 L296.20,430 Z" fill="#2c79d6"/>
+<line class="placeholder-error-bar" x1="278.20" y1="236.98" x2="278.20" y2="244.48" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M350.40,430 L350.40,427.17 Q350.40,424.33 353.23,424.33 L383.57,424.33 Q386.40,424.33 386.40,427.17 L386.40,430 Z" fill="#f9ccbc"/>
+<line class="placeholder-error-bar" x1="368.40" y1="420.65" x2="368.40" y2="428.02" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M394.40,430 L394.40,390.67 Q394.40,384.67 400.40,384.67 L424.40,384.67 Q430.40,384.67 430.40,390.67 L430.40,430 Z" fill="#eb6935"/>
+<line class="placeholder-error-bar" x1="412.40" y1="378.70" x2="412.40" y2="390.64" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M484.50,430 L484.50,222.37 Q484.50,216.37 490.50,216.37 L514.50,216.37 Q520.50,216.37 520.50,222.37 L520.50,430 Z" fill="#f9ccbc"/>
+<line class="placeholder-error-bar" x1="502.50" y1="210.77" x2="502.50" y2="221.97" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M528.50,430 L528.50,177.60 Q528.50,171.60 534.50,171.60 L558.50,171.60 Q564.50,171.60 564.50,177.60 L564.50,430 Z" fill="#eb6935"/>
+<line class="placeholder-error-bar" x1="546.50" y1="165.79" x2="546.50" y2="177.41" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M618.70,430 L618.70,385.00 Q618.70,379.00 624.70,379.00 L648.70,379.00 Q654.70,379.00 654.70,385.00 L654.70,430 Z" fill="#bfe3b5"/>
+<line class="placeholder-error-bar" x1="636.70" y1="371.77" x2="636.70" y2="386.23" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M662.70,430 L662.70,402.00 Q662.70,396.00 668.70,396.00 L692.70,396.00 Q698.70,396.00 698.70,402.00 L698.70,430 Z" fill="#3b8f2c"/>
+<line class="placeholder-error-bar" x1="680.70" y1="388.93" x2="680.70" y2="403.07" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M752.80,430 L752.80,208.77 Q752.80,202.77 758.80,202.77 L782.80,202.77 Q788.80,202.77 788.80,208.77 L788.80,430 Z" fill="#bfe3b5"/>
+<line class="placeholder-error-bar" x1="770.80" y1="195.51" x2="770.80" y2="210.02" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<path d="M796.80,430 L796.80,221.23 Q796.80,215.23 802.80,215.23 L826.80,215.23 Q832.80,215.23 832.80,221.23 L832.80,430 Z" fill="#3b8f2c"/>
+<line class="placeholder-error-bar" x1="814.80" y1="210.76" x2="814.80" y2="219.71" stroke="#5f5e5a" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+<text x="100.1" y="407.0" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">2.0</text>
+<text x="144.1" y="398.2" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">3.1</text>
+<text x="122.1" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">VitaBench</text>
+<text x="234.2" y="270.7" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">25.9</text>
+<text x="278.2" y="229.0" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">33.4</text>
+<text x="256.2" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">τ²-Bench</text>
+<text x="189.2" y="486" text-anchor="middle" font-size="15" font-weight="500" fill="#2c79d6" style="fill:rgb(44, 121, 214);stroke:none;font-family:anthropic-sans, -apple-system, system-ui, Segoe UI, sans-serif;font-size:15px;font-weight:500;text-anchor:middle">ReAct (Q3-4B) / Odyssey-Nano</text>
+<text x="368.4" y="412.6" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">1.0</text>
+<text x="412.4" y="370.7" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">8.0</text>
+<text x="390.4" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">VitaBench</text>
+<text x="502.5" y="202.8" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">37.7</text>
+<text x="546.5" y="157.8" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">45.6</text>
+<text x="524.5" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">τ²-Bench</text>
+<text x="457.5" y="486" text-anchor="middle" font-size="15" font-weight="500" fill="#eb6935" style="fill:rgb(235, 105, 53);stroke:none;font-family:anthropic-sans, -apple-system, system-ui, Segoe UI, sans-serif;font-size:15px;font-weight:500;text-anchor:middle">ReAct (Q3-8B) / Odyssey-Mini</text>
+<text x="636.7" y="363.8" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">9.0</text>
+<text x="680.7" y="380.9" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">6.0</text>
+<text x="658.7" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">VitaBench</text>
+<text x="770.8" y="187.5" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">40.1</text>
+<text x="814.8" y="202.8" font-size="15" font-weight="500" fill="#0b0b0b" text-anchor="middle">37.9</text>
+<text x="792.8" y="454.0" font-size="16" font-weight="400" fill="#52514e" text-anchor="middle">τ²-Bench</text>
+<text x="725.8" y="486" text-anchor="middle" font-size="15" font-weight="500" fill="#3b8f2c" style="fill:rgb(59, 143, 44);stroke:none;font-family:anthropic-sans, -apple-system, system-ui, Segoe UI, sans-serif;font-size:15px;font-weight:500;text-anchor:middle">ReAct (Q3-14B) / Odyssey-Mid</text>
+<rect x="620" y="18" width="16" height="16" rx="3" fill="#c3c2b7"/>
+<text x="642.0" y="31" font-size="14" font-weight="400" fill="#52514e" text-anchor="start">Base (ReAct)</text>
+<rect x="620" y="40" width="16" height="16" rx="3" fill="#5f5e5a"/>
+<text x="642.0" y="53" font-size="14" font-weight="400" fill="#52514e" text-anchor="start">Mixed RL (Odyssey)</text>
+</svg>
