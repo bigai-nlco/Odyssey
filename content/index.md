@@ -24,6 +24,11 @@ bibliography: references.bib
 
 ## When Your Agent Fails at Step 19
 
+<figure class="l-page">
+  <img src="/assets/alphago_lee_sedol.webp" alt="Lee Sedol contemplating during AlphaGo match" />
+  <figcaption><strong>Figure:</strong> Lee Sedol during the historic AlphaGo vs. Lee Sedol match (2016). AlphaGo's Move 37 in Game 2 became legendary for its unconventional brilliance—a decision that initially appeared to be a mistake but proved pivotal to victory.</figcaption>
+</figure>
+
 <div class="evidence-note" style="font-style: italic; margin: 1rem 0 1.5rem;">
 Move 37, Step 19: In the second game of <a href="https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol">AlphaGo vs. Lee Sedol (2016)</a>, AlphaGo played a move so unconventional that commentators initially thought it was a mistake. It became famous as "Move 37", the 37th move of the game, counting both players' moves, but AlphaGo's own 19th move. For AlphaGo, a neural agent, this surprising decision proved brilliant. For a language agent, its own step 19 might instead be a bad tool call that derails an otherwise correct trajectory. The parallel is about assigning credit to individual decisions: can we build systems that learn which actions lead to success and which cause failure?
 </div>
