@@ -563,11 +563,12 @@ function shell(options) {
   const footer = footerMarkup(config);
   const headerConfig = config.header && typeof config.header === 'object' ? config.header : null;
   const logoUrl = headerConfig?.site_logo ? configuredUrlFor(options.baseUrl, headerConfig.site_logo) : '';
+  const logoLinkUrl = headerConfig?.site_logo_url || homeUrl;
   const headerBrand = logoUrl
     ? '<img src="' + escapeHtml(logoUrl) + '" alt="' + siteName + '" class="site-logo">'
     : '<span class="wordmark">' + siteName + '</span>';
   const header = headerConfig
-    ? '<header class="site-header"><a href="' + homeUrl + '" class="header-brand">'
+    ? '<header class="site-header"><a href="' + escapeHtml(logoLinkUrl) + '" class="header-brand">'
       + headerBrand + '</a></header>\n'
     : '';
   return '<!doctype html>\n'
