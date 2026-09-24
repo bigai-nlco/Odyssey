@@ -62,14 +62,15 @@ fetch(basePath + '/assets/training_data.json')
 
             // Responsive font sizes
             const isMobile = window.innerWidth <= 767;
+            const isSmallMobile = window.innerWidth <= 480;
             const isTablet = window.innerWidth > 767 && window.innerWidth <= 1024;
 
-            const titleFontSize = isMobile ? 13 : 16;
-            const legendFontSize = isMobile ? 10 : 13;
-            const axisTitleFontSize = isMobile ? 10 : 13;
-            const axisTickFontSize = isMobile ? 9 : 11;
-            const tooltipTitleFontSize = isMobile ? 11 : 13;
-            const tooltipBodyFontSize = isMobile ? 10 : 12;
+            const titleFontSize = isSmallMobile ? 12 : (isMobile ? 14 : 16);
+            const legendFontSize = isSmallMobile ? 9 : (isMobile ? 11 : 13);
+            const axisTitleFontSize = isSmallMobile ? 9 : (isMobile ? 11 : 13);
+            const axisTickFontSize = isSmallMobile ? 8 : (isMobile ? 10 : 11);
+            const tooltipTitleFontSize = isSmallMobile ? 10 : (isMobile ? 12 : 13);
+            const tooltipBodyFontSize = isSmallMobile ? 9 : (isMobile ? 11 : 12);
 
             new Chart(ctx, {
                 type: 'line',
