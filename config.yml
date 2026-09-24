@@ -2,7 +2,7 @@
 # Leave it empty for a user/organization site (username.github.io).
 site_name: NLCo
 site_description: AgentGEM research from the Natural Language Computing group.
-base_url: ""
+base_url: "/Odyssey"
 language: en
 copyright: 2026 BIGAI NLCo Group. All rights reserved.
 header:
