@@ -731,7 +731,7 @@ $$</p>
 <p><strong>Key observations</strong>:</p>
 <ul>
 <li>
-<p><strong>Natural convergence without Faster-TOP</strong>: The orange curve shows the logprob difference decreases naturally from 0.0117 to 0.0091 over the training run, a 22.6% improvement driven by training dynamics. This demonstrates that even without explicit consistency enforcement, the model’s optimization process gradually improves alignment between training and rollout computations.</p>
+<p><strong>Natural convergence without Faster-TOP</strong>: The orange curve shows the logprob difference decreases naturally from 0.0117 to 0.0091 over the training run, a natural 22.6% improvement driven by training dynamics. This intuitively suggests that partial rounding errors diminish as training progresses; however, the underlying mechanisms behind this trend warrant further investigation and ablation.</p>
 </li>
 <li>
 <p><strong>Faster-TOP target consistency</strong>: The green dashed line at 0.0 represents the perfect consistency achievable with Odyssey-Infra’s Faster-TOP optimization. Faster-TOP enforces bitwise parity between training and inference through strict TITO token passing and deterministic kernel execution. The gap between the orange curve and the green line illustrates the remaining consistency overhead that Faster-TOP eliminates. In contrast, systems with re-tokenization or non-deterministic floating-point operations can exhibit logprob drifts of 0.05 or higher.</p>
@@ -743,7 +743,7 @@ $$</p>
 <p><strong>No catastrophic divergence</strong>: The metric exhibits natural variance (peak at 0.013, trough at 0.0085) but never undergoes sudden spikes or divergence, which would indicate gradient staleness or numerical overflow. This stability allows Odyssey to safely train for extended horizons without encountering the train-inference mismatch issues that plague many RL systems at scale.</p>
 </li>
 </ul>
-<p>This metric complements the reward and completion curves: while those measure task-level outcomes, logprob consistency measures the <strong>infrastructure-level reliability</strong> that enables those outcomes. The natural 22.6% improvement demonstrates that Odyssey’s training dynamics inherently reduce consistency drift, while Faster-TOP provides the infrastructure to eliminate it entirely.</p>
+<p>This metric complements the reward and completion curves: while those measure task-level outcomes, logprob consistency measures the <strong>infrastructure-level reliability</strong> that enables those outcomes.</p>
 <h3 id="findings-insights" tabindex="-1">Findings &amp; Insights</h3>
 <p>Environment quality and algorithm design must work together. Clean environments allow vanilla policy gradient with group baseline methods like GRPO to work; noisy environments need specialized methods. Odyssey uses three mechanisms:</p>
 <ol>
