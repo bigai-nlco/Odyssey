@@ -324,7 +324,7 @@ Similar to [Mercor and Sky Lab](https://www.mercor.com/blog/training-frontier-kn
 
 ## Benchmarking Odyssey Agents
 
-We evaluate Odyssey models on six benchmarks: BFCL-v4 and ACEBench (tool use), τ²-Bench and VitaBench (conversation), WorkBench and OfficeQA (knowledge work).
+We evaluate Odyssey models on six benchmarks: [BFCL-v4](https://github.com/shishirpatil/gorilla) and [ACEBench](https://github.com/chenchen0103/ACEBench) (tool use), [τ²-Bench](https://github.com/sierra-research/tau2-bench) and [VitaBench](https://github.com/meituan-longcat/vitabench) (conversation), [WorkBench](https://github.com/olly-styles/WorkBench) and [OfficeQA](https://www.databricks.com/blog/introducing-officeqa-benchmark-end-to-end-grounded-reasoning) (knowledge work).
 
 | Method | BFCL-v4 | ACEBench | τ²-Bench | VitaBench | WorkBench | OfficeQA | Avg. |
 |---|---|---|---|---|---|---|---|
