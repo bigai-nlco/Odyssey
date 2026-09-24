@@ -286,7 +286,7 @@ HCA reduces to standard group-baseline estimation when no failures occur, while:
 - **Penalizing only responsible tokens**: A typo at step 4 doesn't penalize correct reasoning at steps 1-3
 - **Maintaining stable gradient variance**: Localized masks reduce the effective token count, preventing gradient explosion from long failed rollouts
 
-The result: **sample efficiency improves** on long-horizon tasks compared to standard GRPO, with gains of 2-3× observed in our experiments.
+The result: **sample efficiency improves** on long-horizon tasks compared to standard GRPO, with gains of 0.1-0.3× observed in our experiments.
 
 ## Odyssey-Infra: Towards a Correct and Stable Agentic RL System
 
