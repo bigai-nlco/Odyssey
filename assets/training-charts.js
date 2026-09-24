@@ -36,7 +36,9 @@ const chartConfigs = [
     {id: 'chart-policy-entropy', dataKey: 'policy_entropy', title: 'Policy Entropy', yLabel: 'Policy Entropy'}
 ];
 
-fetch('/assets/training_data.json')
+// Detect base path from current location
+const basePath = window.location.pathname.replace(/\/[^\/]*$/, '') || '';
+fetch(basePath + '/assets/training_data.json')
     .then(res => res.json())
     .then(data => {
         chartConfigs.forEach(config => {
