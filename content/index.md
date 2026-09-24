@@ -118,7 +118,7 @@ The pipeline produces environments where tasks are executable (validated in sand
 
 This addresses the *experience reliability* bottleneck. But even with reliable environments, coarse credit assignment still wastes learning signal. That's where Odyssey-RL comes in.
 
-### Cost Audit&Analysis: Economics of Environment Synthesis
+### Cost Audit: Economics of Environment Synthesis
 
 To provide transparency on the resource requirements of our synthesis pipeline, we conducted a detailed cost audit of 9 representative tasks from the Odyssey-Env corpus. These tasks span diverse domains, from multilingual content adaptation to smart home planning, and represent the full synthesis workflow: data collection, tool generation, task construction, and iterative verification. Note that we employ the model `dpsk-v4-flash-260425` as environment designer for envs and tasks synthesis.
 
