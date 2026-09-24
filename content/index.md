@@ -1539,7 +1539,7 @@ We are grateful to the maintainers and contributors of these projects for making
 **Experiments and Evaluation**: Yang Liu, Shuhan Qin  
 **Corresponding Author**: Zilong Zheng
 
-## Citations
+## Citation
 
 If you find Odyssey useful in your research, please cite our work:
 
