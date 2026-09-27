@@ -1554,6 +1554,6 @@ If you find Odyssey useful in your research, please cite our work:
   author={Qin, Shuhan and Liu, Yang and Li, Jiaqi and Bai, Jun and Wang, Xiaobo and Wu, Tong and Wang, Yanting and Yao, Gang and Chen, Hao and Jia, Zixia and Zheng, Zilong},
   year={2026},
   month={September},
-  url={https://tongagents.mybigai.ac.cn/en/index/odyssey}
+  url={https://bigai-nlco.github.io/Odyssey}
 }
 ```
