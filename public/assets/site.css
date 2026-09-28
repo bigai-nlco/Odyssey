@@ -970,14 +970,11 @@ mjx-container[jax="CHTML"][display="true"] {
   text-decoration: none;
   color: #24292f;
   border-radius: 6px;
-  transition: all 0.15s ease;
   margin-bottom: 0.25rem;
 }
 
 .work-item:hover {
   background: #f6f8fa;
-  border: 1px solid transparent;
-  padding: calc(0.65rem - 1px) calc(0.75rem - 1px);
 }
 
 .work-info {
@@ -990,10 +987,6 @@ mjx-container[jax="CHTML"][display="true"] {
   font-weight: 600;
   line-height: 1.35;
   color: #0969da;
-}
-
-.work-item:hover h5 {
-  text-decoration: underline;
 }
 
 .work-venue {
@@ -1012,12 +1005,6 @@ mjx-container[jax="CHTML"][display="true"] {
   height: 14px;
   color: #57606a;
   flex-shrink: 0;
-  transition: transform 0.15s ease;
-}
-
-.work-item:hover > svg {
-  transform: translateX(2px);
-  color: #0969da;
 }
 
 .site-header {
