@@ -907,7 +907,8 @@ mjx-container[jax="CHTML"][display="true"] {
   box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
+  transform: translateX(10px) translateY(-8px);
+  transform-origin: top right;
   transition: all 0.2s ease;
   z-index: 1000;
   border: 1px solid #d0d7de;
@@ -916,7 +917,7 @@ mjx-container[jax="CHTML"][display="true"] {
 .more-works-dropdown.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(0) translateY(0);
 }
 
 .dropdown-header {
@@ -1031,13 +1032,14 @@ mjx-container[jax="CHTML"][display="true"] {
     left: 1rem !important;
     width: auto !important;
     max-width: none !important;
+    transform: translateX(20px) !important;
     transform-origin: top right;
     max-height: 70vh;
     overflow-x: hidden;
   }
 
   .more-works-dropdown.active {
-    transform: translateY(0) !important;
+    transform: translateX(0) !important;
   }
 
   .works-list {
@@ -1135,6 +1137,7 @@ mjx-container[jax="CHTML"][display="true"] {
     left: 0.5rem !important;
     width: auto !important;
     max-width: none !important;
+    transform: translateX(20px) !important;
     max-height: 75vh;
     overflow-x: hidden;
   }
