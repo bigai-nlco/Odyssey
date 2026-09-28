@@ -857,6 +857,7 @@ mjx-container[jax="CHTML"][display="true"] {
 .more-works-container {
   position: relative;
   margin-left: auto;
+  z-index: 1001;
 }
 
 .more-works-btn {
@@ -874,6 +875,8 @@ mjx-container[jax="CHTML"][display="true"] {
   cursor: pointer;
   transition: all 0.15s ease;
   box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+  position: relative;
+  z-index: 1002;
 }
 
 .more-works-btn:hover {
