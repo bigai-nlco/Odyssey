@@ -1019,6 +1019,7 @@ mjx-container[jax="CHTML"][display="true"] {
     width: calc(100vw - 2rem);
     right: 1rem;
     left: 1rem;
+    max-height: 70vh;
   }
 
   .more-works-btn {
@@ -1031,11 +1032,126 @@ mjx-container[jax="CHTML"][display="true"] {
     height: 12px;
   }
 
+  .more-works-btn .dropdown-arrow {
+    width: 10px;
+    height: 10px;
+  }
+
+  .works-list {
+    max-height: calc(70vh - 60px);
+  }
+
+  .work-item {
+    padding: 0.5rem 0.6rem;
+    gap: 0.6rem;
+  }
+
   .work-item h5 {
     font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .work-venue {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.35rem;
+  }
+
+  .work-item > svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dropdown-header {
+    padding: 0.6rem 0.8rem;
   }
 
   .dropdown-header h4 {
     font-size: 0.8rem;
+  }
+
+  .close-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Tablet specific (iPad) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .more-works-dropdown {
+    width: 400px;
+  }
+
+  .more-works-btn {
+    padding: 0.38rem 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .work-item h5 {
+    font-size: 0.78rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .more-works-btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+    gap: 0.3rem;
+  }
+
+  .more-works-btn svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .more-works-btn .dropdown-arrow {
+    width: 9px;
+    height: 9px;
+  }
+
+  .more-works-dropdown {
+    width: calc(100vw - 1rem);
+    right: 0.5rem;
+    left: 0.5rem;
+    max-height: 75vh;
+  }
+
+  .works-list {
+    max-height: calc(75vh - 55px);
+    padding: 0.4rem;
+  }
+
+  .work-item {
+    padding: 0.45rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .work-item h5 {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .work-venue {
+    font-size: 0.6rem;
+    padding: 0.08rem 0.3rem;
+  }
+
+  .dropdown-header {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .dropdown-header h4 {
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape mode on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .more-works-dropdown {
+    max-height: 85vh;
+  }
+
+  .works-list {
+    max-height: calc(85vh - 55px);
   }
 }
