@@ -585,9 +585,68 @@ function shell(options) {
   const headerBrand = logoUrl
     ? '<img src="' + escapeHtml(logoUrl) + '" alt="' + siteName + '" class="site-logo">'
     : '<span class="wordmark">' + siteName + '</span>';
+  const moreWorksWidget = `<div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <svg class="svg-inline--fa fa-flask fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="flask" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M437.2 403.5L320 215V64h8c13.3 0 24-10.7 24-24V24c0-13.3-10.7-24-24-24H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h8v151L10.8 403.5C-18.5 450.6 15.3 512 70.9 512h306.2c55.7 0 89.4-61.5 60.1-108.5zM137.9 320l48.2-77.6c3.7-5.2 5.8-11.6 5.8-18.4V64h64v160c0 6.9 2.2 13.2 5.8 18.4l48.2 77.6h-172z"></path></svg>
+      More Works
+      <svg class="svg-inline--fa fa-chevron-down fa-w-14 dropdown-arrow" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://arxiv.org/abs/2603.07980" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>$OneMillion-Bench: How Far are Language Agents from Human Experts?</h5>
+            <span class="work-venue">NeurIPS 2026</span>
+          </div>
+          <svg class="svg-inline--fa fa-external-link-alt fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
+        </a>
+        <a href="https://openreview.net/forum?id=tyqW6SYxWB" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning</h5>
+            <span class="work-venue">ICML 2026</span>
+          </div>
+          <svg class="svg-inline--fa fa-external-link-alt fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
+        </a>
+        <a href="https://openreview.net/forum?id=MQV4TJyqnb" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>RuleReasoner: Reinforced Rule-based Reasoning via Domain-aware Dynamic Sampling</h5>
+            <span class="work-venue">ICLR 2026</span>
+          </div>
+          <svg class="svg-inline--fa fa-external-link-alt fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
+        </a>
+        <a href="https://github.com/bigai-nlco/bcg" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Belief Context Graph</h5>
+            <span class="work-venue">GitHub</span>
+          </div>
+          <svg class="svg-inline--fa fa-external-link-alt fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
+        </a>
+        <a href="https://openreview.net/forum?id=m5EIuQxt0x" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>TokenSwift: Lossless Acceleration of Ultra Long Sequence Generation</h5>
+            <span class="work-venue">ICML 2025</span>
+          </div>
+          <svg class="svg-inline--fa fa-external-link-alt fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
+        </a>
+        <a href="https://aclanthology.org/2025.acl-long.1113" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Look Both Ways and No Sink: Converting LLMs into Text Encoders without Training</h5>
+            <span class="work-venue">ACL 2025</span>
+          </div>
+          <svg class="svg-inline--fa fa-external-link-alt fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>`;
   const header = headerConfig
     ? '<header class="site-header"><a href="' + escapeHtml(logoLinkUrl) + '" class="header-brand">'
-      + headerBrand + '</a></header>\n'
+      + headerBrand + '</a>' + moreWorksWidget + '</header>\n'
     : '';
   return '<!doctype html>\n'
     + '<html lang="' + escapeHtml(config.language || 'en') + '">\n'
@@ -602,7 +661,24 @@ function shell(options) {
     + '<script defer src="' + copyCodeScriptUrl + '"></script></head>\n'
     + '<body' + (options.article ? ' class="article-page"' : '') + '>\n'
     + header
-    + options.body + '\n<footer class="site-footer">' + footer + '</footer>\n</body></html>';
+    + options.body + '\n<footer class="site-footer">' + footer + '</footer>\n'
+    + '<script>\n'
+    + 'function toggleMoreWorks() {\n'
+    + '  const dropdown = document.getElementById(\'moreWorksDropdown\');\n'
+    + '  dropdown.classList.toggle(\'active\');\n'
+    + '}\n'
+    + 'document.addEventListener(\'click\', function(event) {\n'
+    + '  const container = document.querySelector(\'.more-works-container\');\n'
+    + '  const dropdown = document.getElementById(\'moreWorksDropdown\');\n'
+    + '  if (container && !container.contains(event.target)) {\n'
+    + '    dropdown.classList.remove(\'active\');\n'
+    + '  }\n'
+    + '});\n'
+    + 'document.getElementById(\'moreWorksDropdown\')?.addEventListener(\'click\', function(event) {\n'
+    + '  event.stopPropagation();\n'
+    + '});\n'
+    + '</script>\n'
+    + '</body></html>';
 }
 
 function articlePage(post, config, baseUrl) {
