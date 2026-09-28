@@ -1016,10 +1016,16 @@ mjx-container[jax="CHTML"][display="true"] {
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .more-works-dropdown {
-    width: calc(100vw - 2rem);
-    right: 1rem;
-    left: 1rem;
+    right: 0 !important;
+    left: auto !important;
+    width: calc(100vw - 2rem) !important;
+    max-width: calc(100vw - 2rem) !important;
+    transform-origin: top right;
     max-height: 70vh;
+  }
+
+  .more-works-dropdown.active {
+    transform: translateY(0) !important;
   }
 
   .more-works-btn {
@@ -1110,9 +1116,10 @@ mjx-container[jax="CHTML"][display="true"] {
   }
 
   .more-works-dropdown {
-    width: calc(100vw - 1rem);
-    right: 0.5rem;
-    left: 0.5rem;
+    width: calc(100vw - 1rem) !important;
+    max-width: calc(100vw - 1rem) !important;
+    right: 0 !important;
+    left: auto !important;
     max-height: 75vh;
   }
 
